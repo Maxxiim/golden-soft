@@ -1,0 +1,20 @@
+body {
+    background: var(--bg);
+    font-family: "SFT";
+    font-weight: 400;
+    font-size: px;
+    color: var(--primary);
+}
+
+.container {
+    max-width: 1277px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    &-banner{
+        width: 100%;
+        display: flex;
+        text-align: center;
+    }
+}

@@ -1,4 +1,81 @@
-body {
-    font-family: "Roboto";
+.header {}
+
+.header-banner {
+    width: 100%;
+    padding: 9px 0;
+    background: rgb(69, 79, 91);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-banner__text {
+    font-family: "SFD";
+    color: #fff;
+    margin-right: 153px;
+    margin-left: 350px;
+    letter-spacing: 2.8px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.header-banner__text-call {
+    display: inline-flex;
+    font-family: "SFD";
+    color: #fff;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+    letter-spacing: 3.1px;
+
+    & a {
+        text-decoration: none;
+        display: inline-flex;
+        font-family: "SFD";
+        color: #fff;
+        cursor: pointer;
+    }
+
+    &:hover {
+        border-bottom: 2px solid #fff;
+    }
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.header-logo {
+    margin-right: 102px;
+    max-width: 52px;
+    height: auto;
+    display: block;
+}
+
+.header-nav {}
+
+.header-nav__list {
+    display: flex;
+}
+
+.header-nav__list-item {
+    margin-right: 33px;
     font-size: 20px;
+
+    & a {
+        font-family: "SFT-light";
+        color: rgb(22, 28, 36);
+    }
+
+    &:hover a {
+        font-family: "SFT";
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
 }
