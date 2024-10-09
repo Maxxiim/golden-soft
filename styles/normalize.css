@@ -42,8 +42,8 @@ main {
    */
 
 h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
+    margin: 0;
+    padding: 0;
 }
 
 /* Grouping content
@@ -380,13 +380,16 @@ template {
     display: none;
 }
 
-ul,li,ol{
+ul,
+li,
+ol {
     margin: 0;
     padding: 0;
     list-style: none;
 }
+
 a {
-    text-decoration: none;  
+    text-decoration: none;
     margin: 0;
     padding: 0;
 }

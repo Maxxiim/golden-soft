@@ -6,15 +6,34 @@ body {
     color: var(--primary);
 }
 
+
+
 .container {
     max-width: 1277px;
     width: 100%;
     margin: 0 auto;
     padding: 0 15px;
 
-    &-banner{
+    &-banner {
         width: 100%;
         display: flex;
         text-align: center;
+    }
+}
+
+.btn {
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "SFD-medium", sans-serif;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    width: 220px;
+    padding: 12px 21px 12px 37px;
+    border: none;
+    background-color: rgb(66, 149, 228);
+    transition: all .1s ease-in;
+
+    &:hover {
+        background-color: rgb(48, 132, 211);
     }
 }

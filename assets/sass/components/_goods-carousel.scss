@@ -1,0 +1,118 @@
+.goods-carousel {
+    padding-top: 152px;
+    margin-bottom: 52px;
+    background-color: rgba(0, 0, 0, 0.02);
+    height: 774px;
+}
+
+.product {}
+
+.product-list {}
+
+.product-list__item {
+    position: relative;
+    display: flex;
+    justify-content: end;
+    padding-top: 20px;
+    margin-right: 177px;
+    letter-spacing: -1px;
+}
+
+.product-list__item-img {
+    z-index: -1;
+    position: absolute;
+    top: -156px;
+    left: -100px;
+
+    width: 1441px;
+}
+
+.product-list__item-descr {
+    max-width: 604px;
+}
+
+.product-list__item-descr-title {
+    font-family: "SFT-bold";
+    font-size: 44px;
+    color: rgb(22, 28, 36);
+    margin-bottom: 10px;
+}
+
+.product-list__item-descr-title-name {
+    font-family: "SFT-bold";
+    letter-spacing: -2px;
+    font-size: 44px;
+    color: rgb(22, 28, 36);
+    margin-bottom: 32px;
+}
+
+.product-list__item-descr-text {
+    letter-spacing: 0;
+    line-height: 21px;
+    font-family: "SFT";
+    max-width: 287px;
+    color: rgb(69, 79, 91);
+    font-size: 14px;
+    margin-bottom: 21px;
+
+    &:last-child {
+        margin-bottom: 30px;
+    }
+}
+
+.product-list__item-price {
+    margin-top: 43px;
+    margin-bottom: 16px;
+}
+
+.product-list__item-price-title {
+    color: rgb(69, 79, 91);
+    font-size: 12px;
+    font-weight: 400;
+    font-family: "SFT", sans-serif;
+    letter-spacing: 0px;
+    margin-bottom: 6px;
+}
+
+.product-list__item-price-old {
+    margin-right: 8px;
+    font-family: "SFT-bold", sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 24px;
+    color: rgb(22, 28, 36);
+
+    &::after {
+        content: "₽";
+    }
+}
+
+.product-list__item-price-new {
+    position: relative;
+    letter-spacing: 2px;
+    font-family: "SFT-light", sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+    color: rgb(164, 164, 164);
+
+    &::after {
+        content: "₽";
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 14px;
+        left: 0;
+        width: 100%;
+        border: 1px solid rgb(164, 164, 164);
+    }
+}
+
+.btn {
+    // --> _base.scss
+}
+
+.btn-product {
+    margin-bottom: 90px;
+}
