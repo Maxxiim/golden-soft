@@ -286,14 +286,17 @@ body {
 }
 
 .product-list__item {
+  display: none;
   margin-right: 90px;
-  width: 33.33%;
   min-width: 1100px;
   position: relative;
-  display: flex;
   justify-content: end;
   padding-top: 20px;
   letter-spacing: -1px;
+}
+
+.product-list__item-active {
+  display: flex;
 }
 
 .product-list__item-img {
