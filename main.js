@@ -26,5 +26,7 @@ function showPrevProduct() {
     };
     showCurrentProduct();
 };
+
 btnLeft.addEventListener('click', showPrevProduct);
 btnRight.addEventListener('click', showNextProduct);
+showCurrentProduct();
