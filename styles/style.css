@@ -87,6 +87,21 @@
   src: url("/assets/fonts/roboto/Roboto-Medium.woff");
   font-weight: 400;
 }
+*::before,
+::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background: var(--bg);
   font-family: "SFT";
@@ -114,6 +129,7 @@ body {
   font-weight: 500;
   color: rgb(255, 255, 255);
   width: 220px;
+  max-width: 220px;
   padding: 12px 21px 12px 21px;
   border: none;
   background-color: rgb(66, 149, 228);
@@ -553,8 +569,9 @@ body {
 }
 
 .categories {
-  margin-bottom: 300px;
   text-align: center;
+  padding-top: 63px;
+  margin-bottom: 100px;
 }
 
 .categories__title {
@@ -563,6 +580,7 @@ body {
   font-size: 44px;
   line-height: 62px;
   font-weight: 600;
+  margin-bottom: 64px;
 }
 
 .categories__list {
@@ -601,6 +619,7 @@ body {
 }
 
 .categories__list-item-block-text {
+  max-width: 180px;
   text-align: start;
   font-family: "SFT-medium", sans-serif;
   font-size: 22px;
@@ -628,9 +647,21 @@ body {
 }
 
 .btn-categories {
-  display: inline-block;
-  padding: 12px 21px;
+  font-size: 16px;
+  line-height: 36px;
+  font-family: "SFD-medium", sans-serif;
+  font-weight: 500;
+  background: rgb(66, 149, 228);
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+.btn-categories a {
   color: rgb(255, 255, 255);
+}
+.btn-categories:hover {
+  background-color: rgb(48, 132, 211);
 }
 
 /*# sourceMappingURL=style.css.map */

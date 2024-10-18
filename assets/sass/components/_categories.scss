@@ -1,6 +1,7 @@
 .categories {
-    margin-bottom: 300px;
     text-align: center;
+    padding-top: 63px;
+    margin-bottom: 100px;
 }
 
 .container {}
@@ -11,6 +12,7 @@
     font-size: 44px;
     line-height: 62px;
     font-weight: 600;
+    margin-bottom: 64px;
 }
 
 .categories__list {
@@ -49,6 +51,7 @@
 }
 
 .categories__list-item-block-text {
+    max-width: 180px;
     text-align: start;
     font-family: "SFT-medium", sans-serif;
     font-size: 22px;
@@ -77,7 +80,21 @@
 }
 
 .btn-categories {
-    display: inline-block;
-    padding: 12px 21px;
-    color: rgb(255, 255, 255);
+    font-size: 16px;
+    line-height: 36px;
+    font-family: "SFD-medium", sans-serif;
+    font-weight: 500;
+    background: rgb(66, 149, 228);
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    transition: all .2s ease-in-out;
+
+    & a {
+        color: rgb(255, 255, 255);
+    }
+
+    &:hover {
+        background-color: rgb(48, 132, 211);
+    }
 }

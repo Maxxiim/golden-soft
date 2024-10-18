@@ -1,3 +1,18 @@
+*::before,
+::after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background: var(--bg);
     font-family: "SFT";
@@ -28,6 +43,7 @@ body {
     font-weight: 500;
     color: rgb(255, 255, 255);
     width: 220px;
+    max-width: 220px;
     padding: 12px 21px 12px 21px;
     border: none;
     background-color: rgb(66, 149, 228);
