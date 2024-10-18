@@ -570,7 +570,7 @@ body {
 
 .categories {
   text-align: center;
-  padding-top: 63px;
+  padding-top: 54px;
   margin-bottom: 100px;
 }
 
@@ -585,7 +585,7 @@ body {
 
 .categories__list {
   display: flex;
-  gap: 40px;
+  gap: 40px 74px;
   flex-wrap: wrap;
   margin-bottom: 50px;
   align-items: center;
@@ -662,6 +662,56 @@ body {
 }
 .btn-categories:hover {
   background-color: rgb(48, 132, 211);
+}
+
+.popular-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+.popular__top-title {
+  max-width: 700px;
+  letter-spacing: -1px;
+  font-family: "SFT-bold", sans-serif;
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 62px;
+  color: rgb(22, 28, 36);
+}
+
+.popular__arrow {
+  display: flex;
+  gap: 66px;
+}
+
+.popular__arrow-left {
+  cursor: pointer;
+  stroke: rgb(22, 28, 36);
+  fill: none;
+}
+
+.popular__arrow__grey {
+  stroke: rgb(196, 205, 213);
+}
+
+.popular__arrow-right {
+  cursor: pointer;
+  stroke: rgb(22, 28, 36);
+  fill: none;
+}
+
+.popular-carousel__list-item {
+  width: 288px;
+  max-width: 290px;
+  position: relative;
+}
+
+.popular-carousel__item-header-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
 
 /*# sourceMappingURL=style.css.map */

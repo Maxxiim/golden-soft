@@ -1,0 +1,72 @@
+.popular {}
+
+.popular-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 64px;
+}
+
+.popular__top-title {
+    max-width: 700px;
+    letter-spacing: -1px;
+    font-family: "SFT-bold", sans-serif;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 62px;
+    color: rgb(22, 28, 36);
+
+}
+
+.popular__arrow {
+    display: flex;
+    gap: 66px;
+}
+
+.popular__arrow-left {
+    cursor: pointer;
+    stroke: rgb(22, 28, 36);
+    fill: none;
+}
+
+.popular__arrow__grey {
+    stroke: rgb(196, 205, 213);
+}
+
+.popular__arrow-right {
+    cursor: pointer;
+    stroke: rgb(22, 28, 36);
+    fill: none;
+}
+
+.popular-carousel {}
+
+.popular-carousel__list {}
+
+.popular-carousel__list-item {
+    width: 288px;
+    max-width: 290px;
+    position: relative;
+}
+
+.popular-carousel__item-header {}
+
+.popular-carousel__item-header-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.popular-carousel__item-header-block {}
+
+.popular-carousel__item-header-presence {}
+
+.popular-carousel__item-header-gift {}
+
+.popular-carousel__item-header-sale {}
+
+.popular-carousel__list-item-descr {}
+
+.popular-carousel__list-item-descr-title {}
+
+.popular-carousel__list-item-descr-price {}
