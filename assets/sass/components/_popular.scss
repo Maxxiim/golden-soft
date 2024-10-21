@@ -8,6 +8,7 @@
 }
 
 .popular__top-title {
+    user-select: none;
     max-width: 700px;
     letter-spacing: -1px;
     font-family: "SFT-bold", sans-serif;
@@ -41,12 +42,14 @@
 
 .product-carousel {
     user-select: none;
+    overflow: hidden;
 }
 
 .product-carousel__list {
     margin-bottom: 96px;
     display: flex;
-    justify-content: space-between;
+    gap: 32px;
+    transition: .2s;
 }
 
 .product-carousel__list-item {

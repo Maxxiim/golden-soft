@@ -30,3 +30,49 @@ function showPrevProduct() {
 btnLeft.addEventListener('click', showPrevProduct);
 btnRight.addEventListener('click', showNextProduct);
 showCurrentProduct();
+
+// product slider
+
+let position = 0;
+let slidesToShow = 4;
+let slidesToScroll = 4;
+
+const productContainer = document.querySelector('.product-carousel');
+const productList = document.querySelector('.product-carousel__list');
+const productItem = document.querySelectorAll('.product-carousel__list-item');
+const itemCount = productItem.length;
+const itemWidth = productContainer.clientWidth / slidesToShow;
+const movePosition = slidesToScroll * itemWidth;
+
+const prevBtn = document.querySelector(".popular__arrow-left");
+const nextBtn = document.querySelector(".popular__arrow-right");
+
+productItem.forEach((el) => {
+    el.style.minWindth = `${itemWidth}px`;
+});
+
+nextBtn.addEventListener('click', () => {
+    const itemsLeft = itemCount - (Math.abs(position) + slidesToShow + itemWidth) / itemWidth;
+
+    position -= itemsLeft >= slidesToScroll ? movePosition : itemsLeft = itemWidth;
+    setPosition();
+    checkBtns();
+});
+
+prevBtn.addEventListener('click', () => {
+    const itemsLeft = Math.abs(position) / itemWidth;
+
+    position += itemsLeft >= slidesToScroll ? movePosition : itemsLeft = itemWidth;
+    setPosition();
+    checkBtns();
+});
+
+
+const setPosition = () => {
+    productList.style.transform = `translateX(${position}px)`;
+};
+
+const checkBtns = () => {
+    prevBtn.disabled = position === 0;
+    nextBtn.disabled = position <= (itemCount - slidesToShow) * itemWidth;
+};
