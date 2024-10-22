@@ -695,6 +695,7 @@ body {
 
 .popular__arrow__grey {
   stroke: rgb(196, 205, 213);
+  fill: none;
 }
 
 .popular__arrow-right {

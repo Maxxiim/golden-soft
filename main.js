@@ -42,7 +42,7 @@ const productList = document.querySelector('.product-carousel__list');
 const productItem = document.querySelectorAll('.product-carousel__list-item');
 const itemCount = productItem.length;
 const itemWidth = productContainer.clientWidth / slidesToShow;
-const movePosition = slidesToScroll * itemWidth;
+let movePosition = slidesToScroll * itemWidth;
 
 const prevBtn = document.querySelector(".popular__arrow-left");
 const nextBtn = document.querySelector(".popular__arrow-right");
@@ -75,4 +75,20 @@ const setPosition = () => {
 const checkBtns = () => {
     prevBtn.disabled = position === 0;
     nextBtn.disabled = position <= (itemCount - slidesToShow) * itemWidth;
+
+    if (position === 0) {
+        prevBtn.classList.add("popular__arrow__grey");
+        prevBtn.classList.remove("popular__arrow-left");
+    } else {
+        prevBtn.classList.remove("popular__arrow__grey");
+        prevBtn.classList.add("popular__arrow-left");
+    }
+
+    if (position <= -((itemCount - slidesToShow) * itemWidth)) {
+        nextBtn.classList.remove("popular__arrow-right");
+        nextBtn.classList.add("popular__arrow__grey");
+    } else {
+        nextBtn.classList.remove("popular__arrow__grey");
+        nextBtn.classList.add("popular__arrow-right");
+    }
 };
