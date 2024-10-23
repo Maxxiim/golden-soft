@@ -866,7 +866,6 @@ body {
 .contact-form {
   padding-top: 64px;
   padding-bottom: 56px;
-  margin-bottom: 300px;
   background: rgb(242, 248, 255);
 }
 
@@ -943,6 +942,125 @@ body {
 
 .contact-form__input-email {
   margin-right: 24px;
+}
+
+.footer {
+  padding-top: 50px;
+  background: rgb(13, 36, 54);
+  padding-bottom: 25px;
+}
+
+.footer__wrapper {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-social__list {
+  margin-right: 216px;
+  min-width: 143px;
+}
+
+.footer-social__list-logo {
+  margin-bottom: 144px;
+}
+
+.footer-social__list-logo-img {
+  width: 105px;
+  height: 88px;
+}
+
+.footer-social__list-item {
+  fill: rgb(255, 255, 255);
+  width: 26px;
+  height: 26px;
+  transition: all 0.2s ease-in-out;
+}
+.footer-social__list-item:hover {
+  fill: rgb(48, 132, 211);
+}
+
+.footer-social__list-item-vk {
+  margin-right: 24px;
+}
+
+.footer-social__list-item-twit {
+  margin-right: 24px;
+}
+
+.footer-nav__list {
+  display: flex;
+}
+
+.footer-nav__list-item {
+  margin-right: 97px;
+}
+.footer-nav__list-item:last-child {
+  margin-right: 0;
+}
+
+.footer-nav__list-item-navigation {
+  min-width: 140px;
+  max-width: 140px;
+}
+
+.footer-nav__list-item-contacts {
+  min-width: 180px;
+  max-width: 180px;
+}
+
+.footer-nav__list-item-street {
+  min-width: 182px;
+  max-width: 182px;
+}
+
+.footer-nav__list-item-information {
+  min-width: 146px;
+  max-width: 147px;
+}
+
+.footer-nav__list-item-title {
+  display: block;
+  margin-bottom: 24px;
+  font-family: "SFT-medium", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: rgb(255, 255, 255);
+}
+
+.footer-nav__list-item-text {
+  max-width: 183px;
+  font-family: "SFT-light", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 26px;
+  color: rgb(255, 255, 255);
+  margin-bottom: 16px;
+  transition: all 0.15s ease;
+}
+.footer-nav__list-item-text:hover {
+  color: rgb(66, 149, 228);
+}
+
+.footer-nav__list-item-section {
+  font-family: "SFT-light", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgb(196, 205, 213);
+  margin-bottom: 16px;
+  margin-bottom: 16px;
+}
+
+.footer__copyright {
+  font-family: "SFD", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgb(255, 255, 255);
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
