@@ -872,6 +872,7 @@ body {
 
 .contact-form__wrapper {
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
   max-width: 800px;
@@ -880,6 +881,7 @@ body {
 }
 
 .contact-form__title {
+  max-width: 550px;
   font-family: "SFT-bold", sans-serif;
   font-weight: 600;
   font-size: 44px;
@@ -894,6 +896,12 @@ body {
   line-height: 26px;
   color: rgb(69, 79, 91);
   margin-bottom: 24px;
+  max-width: 515px;
+}
+
+.contact-form__content {
+  display: flex;
+  align-items: center;
 }
 
 .contact-form__input {
@@ -904,31 +912,36 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
-  width: 240px;
+  width: 220px;
   max-width: 240px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   padding-left: 16px;
+  padding-right: 10px;
   background: rgba(22, 28, 36, 0.04);
 }
 .contact-form__input::placeholder {
-  border: none;
   font-family: "SFT", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
-  color: black;
+  color: rgb(69, 79, 91);
 }
 .contact-form__input:focus {
+  outline: none;
   border: none;
   font-family: "SFT", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
-  color: black;
+  color: rgb(69, 79, 91);
 }
 
 .contact-form__input-name {
+  margin-right: 24px;
+}
+
+.contact-form__input-email {
   margin-right: 24px;
 }
 
