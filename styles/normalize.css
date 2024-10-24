@@ -13,6 +13,20 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    color: transparent;
+}
+
+a:active,
+a:focus {
+    outline: none;
+    background: none;
+}
+
 html {
     line-height: 1.15;
 }
@@ -86,10 +100,6 @@ pre {
 /**
    * Remove the gray background on active links in IE 10.
    */
-
-a {
-    background-color: transparent;
-}
 
 /**
    * 1. Remove the bottom border in Chrome 57-
@@ -391,10 +401,4 @@ ol {
     margin: 0;
     padding: 0;
     list-style: none;
-}
-
-a {
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
 }

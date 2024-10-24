@@ -92,3 +92,38 @@ const checkBtns = () => {
         nextBtn.classList.add("popular__arrow-right");
     }
 };
+
+// header-modal 
+
+const headerModal = document.querySelector('.header-modal');
+const btnCatalog = document.querySelector('.header-nav__list-item-catalog');
+const btnCatalogUnfold = document.querySelector(".header-nav__list-item-unfold")
+const listItems = document.querySelectorAll('.header-modal__list-item');
+
+btnCatalog.addEventListener('mouseenter', () => {
+    headerModal.style.display = 'block';
+    btnCatalogUnfold.classList.add('header-nav__list-item-unfold__active');
+});
+
+btnCatalog.addEventListener('mouseenter', () => {
+    listItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            listItems.forEach(innerItem => {
+                innerItem.querySelector('p').classList.remove('header-modal__list-item-name__active');
+                innerItem.querySelector('img').style.display = 'none'; // Скрываем изображение
+            });
+
+            const nameElement = item.querySelector('p');
+            nameElement.classList.add('header-modal__list-item-name__active');
+
+            const imageElement = item.querySelector('img');
+            imageElement.style.display = 'block';
+        });
+
+    });
+});
+
+headerModal.addEventListener('mouseleave', () => {
+    headerModal.style.display = 'none';
+    btnCatalogUnfold.classList.remove('header-nav__list-item-unfold__active');
+});
