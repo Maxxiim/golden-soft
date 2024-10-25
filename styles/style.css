@@ -1139,23 +1139,23 @@ body {
   margin-bottom: 100px;
 }
 
-.category__way {
+.page-way {
   margin-bottom: 40px;
 }
 
-.category__way-start {
+.page-way__start {
   font-family: "SFT", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
   color: rgb(20, 20, 20);
 }
-.category__way-start::after {
+.page-way__start::after {
   content: "/";
   margin-left: 6px;
 }
 
-.category__way-end {
+.page-way__end {
   font-family: "SFT", sans-serif;
   font-weight: 400;
   font-size: 16px;
