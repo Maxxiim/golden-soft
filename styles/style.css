@@ -1307,9 +1307,13 @@ input::-webkit-inner-spin-button {
 }
 
 .sidebar__filters-price-slider {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   gap: 12px;
+}
+
+.sidebar__filters-price-slider__active {
+  display: flex;
 }
 
 .sidebar__filters-price-slider-field {
@@ -1417,7 +1421,7 @@ input[type=range]::-moz-range-thumb {
   margin: 0;
 }
 
-.sidebar__checkbox-list__active {
+.sidebar__active {
   display: block;
 }
 
