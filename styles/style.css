@@ -139,6 +139,41 @@ body {
   background-color: rgb(48, 132, 211);
 }
 
+.reviews {
+  margin-bottom: 7px;
+  display: flex;
+  align-items: center;
+}
+
+.reviews__stars {
+  margin-right: 12px;
+  display: flex;
+}
+
+.reviews__stars-star {
+  width: 16px;
+  height: 16px;
+  background-color: gray;
+  clip-path: polygon(50% 0%, 63% 35%, 98% 35%, 72% 57%, 82% 91%, 50% 70%, 18% 91%, 28% 57%, 2% 35%, 37% 35%);
+  margin-right: 5px;
+}
+
+.reviews__stars-star:last-child {
+  margin-right: 0;
+}
+
+.reviews__stars-star__active {
+  background-color: rgb(247, 171, 58);
+}
+
+.reviews__count {
+  font-family: "SFT", sans-serif;
+  color: rgb(69, 79, 91);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 21px;
+}
+
 .header {
   border-bottom: 1px solid #C4CDD5;
 }
@@ -1232,8 +1267,13 @@ body {
   color: rgb(0, 0, 0);
 }
 
+.catalog-content {
+  display: flex;
+}
+
 .catalog-sidebar {
   width: 290px;
+  min-width: 290px;
 }
 
 .catalog-sidebar__reset {
@@ -1500,6 +1540,57 @@ input[type=checkbox]:checked + .sidebar__checkbox-list-item-label-custom::after 
   line-height: 24px;
   color: rgb(69, 79, 91);
   margin-left: auto;
+}
+
+.catalog-product {
+  margin-left: 23px;
+  width: 100%;
+  padding-top: 4px;
+}
+
+.catalog-product__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.catalog-product__block {
+  margin-bottom: 46px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.catalog-product__block-tags {
+  font-family: "SFT", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(22, 28, 36);
+  line-height: 24px;
+}
+
+.catalog-product__list {
+  margin-bottom: 0;
+  display: flex;
+  gap: 0;
+  font-family: "SFT";
+  justify-content: space-between;
+}
+
+.catalog-product__list-item {
+  width: 288px;
+  max-width: 290px;
+  position: relative;
+  background: none;
+  margin-bottom: 40px;
+}
+
+.catalog-carousel__item-header {
+  background-color: rgba(0, 0, 0, 0.03);
+  margin-bottom: 0;
+}
+
+.catalog-carousel__list-item-descr {
+  padding: 0 12px 12px 14px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -53,3 +53,38 @@ body {
         background-color: rgb(48, 132, 211);
     }
 }
+
+.reviews {
+    margin-bottom: 7px;
+    display: flex;
+    align-items: center;
+}
+
+.reviews__stars {
+    margin-right: 12px;
+    display: flex;
+}
+
+.reviews__stars-star {
+    width: 16px;
+    height: 16px;
+    background-color: gray;
+    clip-path: polygon(50% 0%, 63% 35%, 98% 35%, 72% 57%, 82% 91%, 50% 70%, 18% 91%, 28% 57%, 2% 35%, 37% 35%);
+    margin-right: 5px;
+}
+
+.reviews__stars-star:last-child {
+    margin-right: 0;
+}
+
+.reviews__stars-star__active {
+    background-color: rgb(247, 171, 58);
+}
+
+.reviews__count {
+    font-family: "SFT", sans-serif;
+    color: rgb(69, 79, 91);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 21px;
+}
