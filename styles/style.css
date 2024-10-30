@@ -1294,6 +1294,10 @@ body {
 .catalog-sidebar__filters-item-unfold {
   stroke: #938A9F;
   display: inline-flex;
+  transition: all 0.15s ease-in;
+}
+.catalog-sidebar__filters-item-unfold:hover {
+  stroke: rgb(66, 149, 228);
 }
 
 .catalog-sidebar__filters-item-unfold__active {

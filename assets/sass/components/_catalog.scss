@@ -105,11 +105,17 @@
 .catalog-sidebar__filters-item-unfold {
     stroke: #938A9F;
     display: inline-flex;
+    transition: all .15s ease-in;
+
+    &:hover {
+        stroke: rgb(66, 149, 228);
+    }
 }
 
 .catalog-sidebar__filters-item-unfold__active {
     transform: rotate(180deg);
     stroke: rgb(66, 149, 228);
+
 }
 
 input::-webkit-outer-spin-button,
@@ -123,7 +129,7 @@ input::-webkit-inner-spin-button {
     gap: 12px;
 }
 
-.sidebar__filters-price-slider__active{
+.sidebar__filters-price-slider__active {
     display: flex;
 }
 

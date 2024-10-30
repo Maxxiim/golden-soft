@@ -129,7 +129,36 @@
 // });
 
 
+const showBlocks = document.querySelectorAll('.catalog-sidebar__filters-item-block');
 
+showBlocks.forEach(block => {
+
+    block.addEventListener('click', () => {
+
+        const blockSliderPrice = block.closest('.catalog-sidebar__filters-item').querySelector('.sidebar__filters-price-slider');
+        const checkboxList = block.closest('.catalog-sidebar__filters-item').querySelector('.sidebar__checkbox-list');
+        const unfoldSpan = block.querySelector('.catalog-sidebar__filters-item-unfold');
+
+        if (blockSliderPrice) {
+            if (blockSliderPrice.classList.contains('sidebar__filters-price-slider__active')) {
+                blockSliderPrice.classList.remove('sidebar__filters-price-slider__active');
+                unfoldSpan.classList.remove('catalog-sidebar__filters-item-unfold__active');
+            } else {
+                blockSliderPrice.classList.add('sidebar__filters-price-slider__active');
+                unfoldSpan.classList.add('catalog-sidebar__filters-item-unfold__active');
+            };
+        };
+        if (checkboxList) {
+            if (checkboxList.classList.contains('sidebar__active')) {
+                checkboxList.classList.remove('sidebar__active');
+                unfoldSpan.classList.remove('catalog-sidebar__filters-item-unfold__active');
+            } else {
+                checkboxList.classList.add('sidebar__active');
+                unfoldSpan.classList.add('catalog-sidebar__filters-item-unfold__active');
+            };
+        };
+    });
+});
 
 // sidebar slider price
 
@@ -154,7 +183,7 @@ priceInput.forEach((input) => {
             }
         }
     })
-})
+});
 
 rangeInput.forEach((input) => {
     input.addEventListener('input', (e) => {
@@ -174,4 +203,4 @@ rangeInput.forEach((input) => {
             progress.style.right = 100 - (maxRange / rangeInput[1].max) * 100 + "%";
         }
     })
-})
+});
