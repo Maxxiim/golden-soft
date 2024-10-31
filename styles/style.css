@@ -1296,7 +1296,7 @@ body {
 }
 
 .catalog-sidebar__filters {
-  border: 1px solid black;
+  border: 1px solid rgb(196, 205, 213);
   padding: 20px;
 }
 
