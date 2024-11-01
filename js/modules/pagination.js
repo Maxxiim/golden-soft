@@ -1,41 +1,34 @@
 const paginate = (products) => {
-    // console.log("products", products);
 
-    let productCount = 6;
-    let currentPage = 1;
+  let productCount = 6;
+  let currentPage = 1;
 
-    const catalogProductList = document.querySelector('.catalog-product__list');
-    const pagination = document.querySelector(".pagination");
-    const btnPrevPagination = document.querySelector('.pagination__btn-prev')
-    const btnNextPagination = document.querySelector('.pagination__btn-next')
+  const catalogProductList = document.querySelector('.catalog-product__list');
+  const pagination = document.querySelector(".pagination");
+  const btnPrevPagination = document.querySelector('.pagination__btn-prev')
+  const btnNextPagination = document.querySelector('.pagination__btn-next')
 
-    const renderProducts = (products, container, numberOfProducts, page) => {
-        catalogProductList.innerHTML = "";
-        const firstProductIndex = numberOfProducts * page - numberOfProducts;
-        const lastProductIndex = firstProductIndex + numberOfProducts;
-        const productsOnPage = products.slice(firstProductIndex, lastProductIndex);
-        console.log(productsOnPage)
-        productsOnPage.forEach((name, image, status, prices,) => {
-            const li = document.createElement('li');
-            console.log(li)
-            li.classList.add('product-carousel__list-item', 'catalog-product__list-item')
-            li.innerHTML = `
+  const renderProducts = (products, container, numberOfProducts, page) => {
+    catalogProductList.innerHTML = "";
+    const firstProductIndex = numberOfProducts * page - numberOfProducts;
+    const lastProductIndex = firstProductIndex + numberOfProducts;
+    const productsOnPage = products.slice(firstProductIndex, lastProductIndex);
+
+    productsOnPage.forEach((product) => {
+      const li = document.createElement('li');
+      li.classList.add('product-carousel__list-item', 'catalog-product__list-item');
+
+      li.innerHTML = `
                 <a href="#">
-
                   <div class="product-carousel__item-header catalog-carousel__item-header">
-                    <img class="product-carousel__item-header-img" src="./assets/images/popular/${image}"
+                    <img class="product-carousel__item-header-img" src="${product.image}"
                       alt="замок golden soft дверной для отеля">
                     <div class="product-carousel__item-header-block">
                       <div class="product-carousel__item-header-presence">
                         <div class="product-carousel__item-header-presence-box">
-                          <svg class="product-carousel__item-header-presence-absent" width="10" height="10"
-                            viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 1L1 9M9 9L1 1L9 9Z" stroke="#E44286" stroke-linecap="round"
-                              stroke-linejoin="round" />
-                          </svg>
-
+                        ${product.status.svg}
                         </div>
-                        <span class="product-carousel__item-header-presence-text">Нет в наличии</span>
+                        <span class="product-carousel__item-header-presence-text">${product.status.check}</span>
                       </div>
                       <div class="product-carousel__item-header-gift">
                         <svg class="product-carousel__item-header-gift-img" width="12" height="12" viewBox="0 0 12 12"
@@ -85,23 +78,48 @@ const paginate = (products) => {
                     </div>
 
                     <p class="product-carousel__list-item-descr-title">
-                      Вариативный замок Golden Soft для отеля
+                      ${product.name}
                     </p>
                     <p class="product-carousel__list-item-descr-price">
-                      <span class="product-carousel__list-item-descr-price-new">7 000₽</span>
-                      <span class="product-carousel__list-item-descr-price-old">8 000₽</span>
+                      <span class="product-carousel__list-item-descr-price-new">${product.price.new}</span>
+                      <span class="product-carousel__list-item-descr-price-old">${product.price.old}</span>
                     </p>
                   </div>
                 </a>
-            `,
-                container.append(li)
-        })
-    };
+            `
+      container.append(li)
+    })
+  };
+
+  const renderPaginations = (products, productCount) => {
+    const pageCount = Math.ceil(products.length / productCount);
+    console.log(products.length)
+    const ul = document.querySelector('.pagination__list');
+
+    for (let i = 1; i <= pageCount; i++) {
+      const li = renderBtn(i)
+      ul.append(li)
+    }
+
+  };
+
+  const renderBtn = (page) => {
+
+    const li = document.createElement("li");
+    li.classList.add('pagination__list-item');
+    li.textContent = page;
 
 
+    if (currentPage === page) {
+      li.classList.add("pagination__list-item__active")
+    }
 
+    return li;
+  }
 
-    renderProducts(products, catalogProductList, productCount, currentPage);
+  renderProducts(products, catalogProductList, productCount, currentPage);
+  renderPaginations(products, productCount);
+  renderBtn(currentPage)
 };
 
 

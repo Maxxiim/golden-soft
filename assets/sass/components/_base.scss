@@ -88,3 +88,49 @@ body {
     font-size: 13px;
     line-height: 21px;
 }
+
+// pagination
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination__btn {}
+
+.pagination__btn-prev {}
+
+.pagination__list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.pagination__list-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: rgb(24, 24, 24);
+    font-size: 16px;
+    line-height: 26px;
+    font-family: "SFT", sans-serif;
+    font-weight: 400;
+    width: 40px;
+    height: 39px;
+}
+
+.pagination__list-item__active {
+    font-size: 16px;
+    line-height: 26px;
+    font-family: "SFT", sans-serif;
+    font-weight: 400;
+    width: 40px;
+    height: 39px;
+    border-radius: 2px;
+    background: rgb(66, 149, 228);
+    color: rgb(255, 255, 255);
+}
+
+.pagination__btn-next {}
