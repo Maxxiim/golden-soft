@@ -186,7 +186,33 @@ body {
   gap: 20px;
 }
 
+.pagination__btn-arrow {
+  width: 41px;
+  height: 41px;
+  cursor: pointer;
+  stroke: #C4CDD5;
+  fill: none;
+}
+
+.pagination__btn-arrow__active {
+  stroke: #161C24;
+}
+
+.pagination__btn-arrow-left {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.pagination__btn-arrow-right {
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+  transform: rotate(180deg);
+}
+
 .pagination__list-item {
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;

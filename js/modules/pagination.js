@@ -5,8 +5,8 @@ const paginate = (products) => {
 
   const catalogProductList = document.querySelector('.catalog-product__list');
   const pagination = document.querySelector(".pagination");
-  const btnPrevPagination = document.querySelector('.pagination__btn-prev')
-  const btnNextPagination = document.querySelector('.pagination__btn-next')
+  const btnPrevPagination = document.querySelector('.pagination__btn-arrow-left')
+  const btnNextPagination = document.querySelector('.pagination__btn-arrow-right')
 
   const renderProducts = (products, container, numberOfProducts, page) => {
     catalogProductList.innerHTML = "";
@@ -93,22 +93,30 @@ const paginate = (products) => {
 
   const renderPaginations = (products, productCount) => {
     const pageCount = Math.ceil(products.length / productCount);
-    console.log(products.length)
     const ul = document.querySelector('.pagination__list');
+    ul.innerHTML = '';
 
-    for (let i = 1; i <= pageCount; i++) {
-      const li = renderBtn(i)
-      ul.append(li)
+    if (pageCount <= 7) {
+      for (let i = 1; i <= pageCount; i++) {
+        const li = renderBtn(i, currentPage);
+        ul.append(li);
+      }
+    } else {
+      ul.append(renderBtn(1, currentPage));
+
+      if (currentPage > 4) {
+        ul.append(renderDot());
+      }
     }
 
-  };
+  }
+
 
   const renderBtn = (page) => {
 
     const li = document.createElement("li");
     li.classList.add('pagination__list-item');
     li.textContent = page;
-
 
     if (currentPage === page) {
       li.classList.add("pagination__list-item__active")
@@ -117,10 +125,73 @@ const paginate = (products) => {
     return li;
   }
 
+  const renderDot = () => {
+    const li = document.createElement("li");
+    li.classList.add('pagination__list-item--dot');
+    li.textContent = "...";
+    return li;
+  };
+
+
+  const updatePagination = () => {
+    pagination.addEventListener('click', (e) => {
+      if (!e.target.closest('.pagination__list-item')) {
+        return;
+      } else {
+        currentPage = e.target.textContent;
+        renderProducts(products, catalogProductList, productCount, currentPage);
+        let currentLi = document.querySelector('.pagination__list-item__active');
+        currentLi.classList.remove('pagination__list-item__active');
+        e.target.classList.add('pagination__list-item__active')
+      }
+    })
+  }
+
   renderProducts(products, catalogProductList, productCount, currentPage);
   renderPaginations(products, productCount);
-  renderBtn(currentPage)
+  updatePagination();
+
+  const liElements = document.querySelectorAll('.pagination__list-item');
+
+  const handlePagination = (e) => {
+    const currentActiveLi = document.querySelector('.pagination__list-item__active')
+    let newActiveLi;
+
+    if (e.target.closest('.pagination__btn-next')) {
+      newActiveLi = currentActiveLi.nextElementSibling;
+    } else {
+      newActiveLi = currentActiveLi.previousElementSibling;
+    }
+
+    if (!newActiveLi && e.target.closest('.pagination__btn-next')) {
+      newActiveLi = liElements[0];
+    } else if (!newActiveLi) {
+      newActiveLi = liElements[liElements.length - 1];
+    }
+
+    currentActiveLi.classList.remove('pagination__list-item__active');
+    newActiveLi.classList.add('pagination__list-item__active');
+
+    // Проверка на активные стрелки right and left
+    if (newActiveLi === liElements[0]) {
+      btnPrevPagination.classList.remove("pagination__btn-arrow__active")
+    } else {
+      btnPrevPagination.classList.add("pagination__btn-arrow__active")
+    }
+
+    if (newActiveLi === liElements[liElements.length - 1]) {
+      btnNextPagination.classList.remove("pagination__btn-arrow__active")
+    } else {
+      btnNextPagination.classList.add("pagination__btn-arrow__active")
+    }
+
+    renderProducts(products, catalogProductList, productCount, currentPage,)
+
+  };
+
+  btnNextPagination.addEventListener('click', handlePagination)
+  btnPrevPagination.addEventListener('click', handlePagination)
 };
 
 
-export default paginate
+export default paginate;
