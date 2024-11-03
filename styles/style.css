@@ -175,6 +175,7 @@ body {
 }
 
 .pagination {
+  max-width: 546px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -223,6 +224,14 @@ body {
   font-weight: 400;
   width: 40px;
   height: 39px;
+}
+
+.pagination__list-item-dot {
+  width: 40px;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .pagination__list-item__active {
@@ -1606,6 +1615,11 @@ input[type=checkbox]:checked + .sidebar__checkbox-list-item-label-custom::after 
 }
 
 .catalog-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 920px;
   margin-left: 23px;
   width: 100%;
   padding-top: 4px;

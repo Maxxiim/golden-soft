@@ -92,6 +92,7 @@ body {
 // pagination
 
 .pagination {
+    max-width: 546px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -146,6 +147,14 @@ body {
     font-weight: 400;
     width: 40px;
     height: 39px;
+}
+
+.pagination__list-item-dot{
+    width: 40px;
+    height: 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .pagination__list-item__active {

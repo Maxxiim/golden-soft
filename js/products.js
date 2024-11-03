@@ -590,6 +590,692 @@ const products = [
 
         link: "#",
     },
+
+    {
+        id: "unique_id_022",
+        name: "Дверной Замок Golden Soft для офиса",
+        image: "./assets/images/popular/foroffice2.png",
+        status: {
+            check: 'Есть в наличии',
+            svg: `<svg class="product-carousel__item-header-presence-box-img" width="10" height="8"
+                viewBox="0 0 10 8" fill="" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 4L4 7L9 1" stroke="" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>`
+        },
+        gift: "Подарок",
+        sale: "true",
+
+        reviews: {
+            count: 12,
+            stars: 3,
+            total_stars: 5
+        },
+
+        price: {
+            new: 33000,
+            old: 39000,
+        },
+
+        link: "#",
+    },
+
+    {
+        id: "unique_id_023",
+        name: "Дверной Замок Golden Soft для офиса",
+        image: "./assets/images/popular/foroffice2.png",
+        status: {
+            check: 'Есть в наличии',
+            svg: `<svg class="product-carousel__item-header-presence-box-img" width="10" height="8"
+                viewBox="0 0 10 8" fill="" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 4L4 7L9 1" stroke="" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>`
+        },
+        gift: "Подарок",
+        sale: "true",
+
+        reviews: {
+            count: 12,
+            stars: 3,
+            total_stars: 5
+        },
+
+        price: {
+            new: 33000,
+            old: 39000,
+        },
+
+        link: "#",
+    },
+
+    {
+        id: "unique_id_024",
+        name: "Дверной Замок Golden Soft для офиса",
+        image: "./assets/images/popular/foroffice2.png",
+        status: {
+            check: 'Есть в наличии',
+            svg: `<svg class="product-carousel__item-header-presence-box-img" width="10" height="8"
+                viewBox="0 0 10 8" fill="" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 4L4 7L9 1" stroke="" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>`
+        },
+        gift: "Подарок",
+        sale: "true",
+
+        reviews: {
+            count: 12,
+            stars: 3,
+            total_stars: 5
+        },
+
+        price: {
+            new: 33000,
+            old: 39000,
+        },
+
+        link: "#",
+    },
+
+    ,
+
+    {
+        id: "unique_id_025",
+        name: "Дверной Замок Golden Soft для офиса",
+        image: "./assets/images/popular/foroffice2.png",
+        status: {
+            check: 'Есть в наличии',
+            svg: `<svg class="product-carousel__item-header-presence-box-img" width="10" height="8"
+                viewBox="0 0 10 8" fill="" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 4L4 7L9 1" stroke="" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>`
+        },
+        gift: "Подарок",
+        sale: "true",
+
+        reviews: {
+            count: 12,
+            stars: 3,
+            total_stars: 5
+        },
+
+        price: {
+            new: 33000,
+            old: 39000,
+        },
+
+        link: "#",
+    },
+
+    {
+        id: "unique_id_026",
+        name: "Дверной Замок Golden Soft для офиса",
+        image: "./assets/images/popular/foroffice2.png",
+        status: {
+            check: 'Есть в наличии',
+            svg: `<svg class="product-carousel__item-header-presence-box-img" width="10" height="8"
+                viewBox="0 0 10 8" fill="" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 4L4 7L9 1" stroke="" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>`
+        },
+        gift: "Подарок",
+        sale: "true",
+
+        reviews: {
+            count: 12,
+            stars: 3,
+            total_stars: 5
+        },
+
+        price: {
+            new: 33000,
+            old: 39000,
+        },
+
+        link: "#",
+    },
+
+    {
+        id: "unique_id_027",
+        name: "Дверной Замок Golden Soft для офиса",
+        image: "./assets/images/popular/foroffice2.png",
+        status: {
+            check: 'Есть в наличии',
+            svg: `<svg class="product-carousel__item-header-presence-box-img" width="10" height="8"
+                viewBox="0 0 10 8" fill="" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 4L4 7L9 1" stroke="" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>`
+        },
+        gift: "Подарок",
+        sale: "true",
+
+        reviews: {
+            count: 12,
+            stars: 3,
+            total_stars: 5
+        },
+
+        price: {
+            new: 33000,
+            old: 39000,
+        },
+
+        link: "#",
+    },
+
+    ,
+
+    {
+        id: "unique_id_028",
+        name: "Дверной Замок Golden Soft для офиса",
+        image: "./assets/images/popular/foroffice2.png",
+        status: {
+            check: 'Есть в наличии',
+            svg: `<svg class="product-carousel__item-header-presence-box-img" width="10" height="8"
+                viewBox="0 0 10 8" fill="" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 4L4 7L9 1" stroke="" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>`
+        },
+        gift: "Подарок",
+        sale: "true",
+
+        reviews: {
+            count: 12,
+            stars: 3,
+            total_stars: 5
+        },
+
+        price: {
+            new: 33000,
+            old: 39000,
+        },
+
+        link: "#",
+    },
+
+    {
+        id: "unique_id_029",
+        name: "Дверной Замок Golden Soft для офиса",
+        image: "./assets/images/popular/foroffice2.png",
+        status: {
+            check: 'Есть в наличии',
+            svg: `<svg class="product-carousel__item-header-presence-box-img" width="10" height="8"
+                viewBox="0 0 10 8" fill="" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 4L4 7L9 1" stroke="" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>`
+        },
+        gift: "Подарок",
+        sale: "true",
+
+        reviews: {
+            count: 12,
+            stars: 3,
+            total_stars: 5
+        },
+
+        price: {
+            new: 33000,
+            old: 39000,
+        },
+
+        link: "#",
+    },
+
+    {
+        id: "unique_id_030",
+        name: "Дверной Замок Golden Soft для офиса",
+        image: "./assets/images/popular/foroffice2.png",
+        status: {
+            check: 'Есть в наличии',
+            svg: `<svg class="product-carousel__item-header-presence-box-img" width="10" height="8"
+                viewBox="0 0 10 8" fill="" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 4L4 7L9 1" stroke="" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>`
+        },
+        gift: "Подарок",
+        sale: "true",
+
+        reviews: {
+            count: 12,
+            stars: 3,
+            total_stars: 5
+        },
+
+        price: {
+            new: 33000,
+            old: 39000,
+        },
+
+        link: "#",
+    },
+
+    ,
+
+    {
+        id: "unique_id_031",
+        name: "Дверной Замок Golden Soft для офиса",
+        image: "./assets/images/popular/foroffice2.png",
+        status: {
+            check: 'Есть в наличии',
+            svg: `<svg class="product-carousel__item-header-presence-box-img" width="10" height="8"
+                viewBox="0 0 10 8" fill="" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 4L4 7L9 1" stroke="" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>`
+        },
+        gift: "Подарок",
+        sale: "true",
+
+        reviews: {
+            count: 12,
+            stars: 3,
+            total_stars: 5
+        },
+
+        price: {
+            new: 33000,
+            old: 39000,
+        },
+
+        link: "#",
+    },
+
+    {
+        id: "unique_id_032",
+        name: "Дверной Замок Golden Soft для офиса",
+        image: "./assets/images/popular/foroffice2.png",
+        status: {
+            check: 'Есть в наличии',
+            svg: `<svg class="product-carousel__item-header-presence-box-img" width="10" height="8"
+                viewBox="0 0 10 8" fill="" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 4L4 7L9 1" stroke="" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>`
+        },
+        gift: "Подарок",
+        sale: "true",
+
+        reviews: {
+            count: 12,
+            stars: 3,
+            total_stars: 5
+        },
+
+        price: {
+            new: 33000,
+            old: 39000,
+        },
+
+        link: "#",
+    },
+
+    {
+        id: "unique_id_033",
+        name: "Дверной Замок Golden Soft для офиса",
+        image: "./assets/images/popular/foroffice2.png",
+        status: {
+            check: 'Есть в наличии',
+            svg: `<svg class="product-carousel__item-header-presence-box-img" width="10" height="8"
+                viewBox="0 0 10 8" fill="" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 4L4 7L9 1" stroke="" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>`
+        },
+        gift: "Подарок",
+        sale: "true",
+
+        reviews: {
+            count: 12,
+            stars: 3,
+            total_stars: 5
+        },
+
+        price: {
+            new: 33000,
+            old: 39000,
+        },
+
+        link: "#",
+    },
+
+    ,
+
+    {
+        id: "unique_id_034",
+        name: "Дверной Замок Golden Soft для офиса",
+        image: "./assets/images/popular/foroffice2.png",
+        status: {
+            check: 'Есть в наличии',
+            svg: `<svg class="product-carousel__item-header-presence-box-img" width="10" height="8"
+                viewBox="0 0 10 8" fill="" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 4L4 7L9 1" stroke="" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>`
+        },
+        gift: "Подарок",
+        sale: "true",
+
+        reviews: {
+            count: 12,
+            stars: 3,
+            total_stars: 5
+        },
+
+        price: {
+            new: 33000,
+            old: 39000,
+        },
+
+        link: "#",
+    },
+
+    {
+        id: "unique_id_035",
+        name: "Дверной Замок Golden Soft для офиса",
+        image: "./assets/images/popular/foroffice2.png",
+        status: {
+            check: 'Есть в наличии',
+            svg: `<svg class="product-carousel__item-header-presence-box-img" width="10" height="8"
+                viewBox="0 0 10 8" fill="" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 4L4 7L9 1" stroke="" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>`
+        },
+        gift: "Подарок",
+        sale: "true",
+
+        reviews: {
+            count: 12,
+            stars: 3,
+            total_stars: 5
+        },
+
+        price: {
+            new: 33000,
+            old: 39000,
+        },
+
+        link: "#",
+    },
+
+    {
+        id: "unique_id_036",
+        name: "Дверной Замок Golden Soft для офиса",
+        image: "./assets/images/popular/foroffice2.png",
+        status: {
+            check: 'Есть в наличии',
+            svg: `<svg class="product-carousel__item-header-presence-box-img" width="10" height="8"
+                viewBox="0 0 10 8" fill="" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 4L4 7L9 1" stroke="" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>`
+        },
+        gift: "Подарок",
+        sale: "true",
+
+        reviews: {
+            count: 12,
+            stars: 3,
+            total_stars: 5
+        },
+
+        price: {
+            new: 33000,
+            old: 39000,
+        },
+
+        link: "#",
+    },
+
+    ,
+
+    {
+        id: "unique_id_037",
+        name: "Дверной Замок Golden Soft для офиса",
+        image: "./assets/images/popular/foroffice2.png",
+        status: {
+            check: 'Есть в наличии',
+            svg: `<svg class="product-carousel__item-header-presence-box-img" width="10" height="8"
+                viewBox="0 0 10 8" fill="" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 4L4 7L9 1" stroke="" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>`
+        },
+        gift: "Подарок",
+        sale: "true",
+
+        reviews: {
+            count: 12,
+            stars: 3,
+            total_stars: 5
+        },
+
+        price: {
+            new: 33000,
+            old: 39000,
+        },
+
+        link: "#",
+    },
+
+    {
+        id: "unique_id_038",
+        name: "Дверной Замок Golden Soft для офиса",
+        image: "./assets/images/popular/foroffice2.png",
+        status: {
+            check: 'Есть в наличии',
+            svg: `<svg class="product-carousel__item-header-presence-box-img" width="10" height="8"
+                viewBox="0 0 10 8" fill="" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 4L4 7L9 1" stroke="" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>`
+        },
+        gift: "Подарок",
+        sale: "true",
+
+        reviews: {
+            count: 12,
+            stars: 3,
+            total_stars: 5
+        },
+
+        price: {
+            new: 33000,
+            old: 39000,
+        },
+
+        link: "#",
+    },
+
+    {
+        id: "unique_id_038",
+        name: "Дверной Замок Golden Soft для офиса",
+        image: "./assets/images/popular/foroffice2.png",
+        status: {
+            check: 'Есть в наличии',
+            svg: `<svg class="product-carousel__item-header-presence-box-img" width="10" height="8"
+                viewBox="0 0 10 8" fill="" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 4L4 7L9 1" stroke="" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>`
+        },
+        gift: "Подарок",
+        sale: "true",
+
+        reviews: {
+            count: 12,
+            stars: 3,
+            total_stars: 5
+        },
+
+        price: {
+            new: 33000,
+            old: 39000,
+        },
+
+        link: "#",
+    },
+
+    ,
+
+    {
+        id: "unique_id_039",
+        name: "Дверной Замок Golden Soft для офиса",
+        image: "./assets/images/popular/foroffice2.png",
+        status: {
+            check: 'Есть в наличии',
+            svg: `<svg class="product-carousel__item-header-presence-box-img" width="10" height="8"
+                viewBox="0 0 10 8" fill="" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 4L4 7L9 1" stroke="" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>`
+        },
+        gift: "Подарок",
+        sale: "true",
+
+        reviews: {
+            count: 12,
+            stars: 3,
+            total_stars: 5
+        },
+
+        price: {
+            new: 33000,
+            old: 39000,
+        },
+
+        link: "#",
+    },
+
+    {
+        id: "unique_id_040",
+        name: "Дверной Замок Golden Soft для офиса",
+        image: "./assets/images/popular/foroffice2.png",
+        status: {
+            check: 'Есть в наличии',
+            svg: `<svg class="product-carousel__item-header-presence-box-img" width="10" height="8"
+                viewBox="0 0 10 8" fill="" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 4L4 7L9 1" stroke="" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>`
+        },
+        gift: "Подарок",
+        sale: "true",
+
+        reviews: {
+            count: 12,
+            stars: 3,
+            total_stars: 5
+        },
+
+        price: {
+            new: 33000,
+            old: 39000,
+        },
+
+        link: "#",
+    },
+
+    {
+        id: "unique_id_024",
+        name: "Дверной Замок Golden Soft для офиса",
+        image: "./assets/images/popular/foroffice2.png",
+        status: {
+            check: 'Есть в наличии',
+            svg: `<svg class="product-carousel__item-header-presence-box-img" width="10" height="8"
+                viewBox="0 0 10 8" fill="" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 4L4 7L9 1" stroke="" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>`
+        },
+        gift: "Подарок",
+        sale: "true",
+
+        reviews: {
+            count: 12,
+            stars: 3,
+            total_stars: 5
+        },
+
+        price: {
+            new: 33000,
+            old: 39000,
+        },
+
+        link: "#",
+    },
+
+    ,
+
+    {
+        id: "unique_id_022",
+        name: "Дверной Замок Golden Soft для офиса",
+        image: "./assets/images/popular/foroffice2.png",
+        status: {
+            check: 'Есть в наличии',
+            svg: `<svg class="product-carousel__item-header-presence-box-img" width="10" height="8"
+                viewBox="0 0 10 8" fill="" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 4L4 7L9 1" stroke="" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>`
+        },
+        gift: "Подарок",
+        sale: "true",
+
+        reviews: {
+            count: 12,
+            stars: 3,
+            total_stars: 5
+        },
+
+        price: {
+            new: 33000,
+            old: 39000,
+        },
+
+        link: "#",
+    },
+
+    {
+        id: "unique_id_023",
+        name: "Дверной Замок Golden Soft для офиса",
+        image: "./assets/images/popular/foroffice2.png",
+        status: {
+            check: 'Есть в наличии',
+            svg: `<svg class="product-carousel__item-header-presence-box-img" width="10" height="8"
+                viewBox="0 0 10 8" fill="" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 4L4 7L9 1" stroke="" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>`
+        },
+        gift: "Подарок",
+        sale: "true",
+
+        reviews: {
+            count: 12,
+            stars: 3,
+            total_stars: 5
+        },
+
+        price: {
+            new: 33000,
+            old: 39000,
+        },
+
+        link: "#",
+    },
+
+    {
+        id: "unique_id_024",
+        name: "Дверной Замок Golden Soft для офиса",
+        image: "./assets/images/popular/foroffice2.png",
+        status: {
+            check: 'Есть в наличии',
+            svg: `<svg class="product-carousel__item-header-presence-box-img" width="10" height="8"
+                viewBox="0 0 10 8" fill="" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 4L4 7L9 1" stroke="" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>`
+        },
+        gift: "Подарок",
+        sale: "true",
+
+        reviews: {
+            count: 12,
+            stars: 3,
+            total_stars: 5
+        },
+
+        price: {
+            new: 33000,
+            old: 39000,
+        },
+
+        link: "#",
+    },
 ];
 
 export default products

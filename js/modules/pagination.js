@@ -1,6 +1,6 @@
 const paginate = (products) => {
 
-  let productCount = 6;
+  let productCount = 9;
   let currentPage = 1;
 
   const catalogProductList = document.querySelector('.catalog-product__list');
@@ -101,14 +101,11 @@ const paginate = (products) => {
         const li = renderBtn(i, currentPage);
         ul.append(li);
       }
-    } else {
-      ul.append(renderBtn(1, currentPage));
-
-      if (currentPage > 4) {
-        ul.append(renderDot());
-      }
+      return;
     }
 
+    ul.append(renderBtn(currentPage))
+    
   }
 
 
@@ -121,13 +118,12 @@ const paginate = (products) => {
     if (currentPage === page) {
       li.classList.add("pagination__list-item__active")
     }
-
     return li;
   }
 
   const renderDot = () => {
     const li = document.createElement("li");
-    li.classList.add('pagination__list-item--dot');
+    li.classList.add('pagination__list-item-dot');
     li.textContent = "...";
     return li;
   };
