@@ -1,36 +1,32 @@
 const paginate = (products) => {
-
-  let productCount = 9;
+  let productCount = 12;
   let currentPage = 1;
 
   const catalogProductList = document.querySelector('.catalog-product__list');
-  const pagination = document.querySelector(".pagination");
-  const btnPrevPagination = document.querySelector('.pagination__btn-arrow-left')
-  const btnNextPagination = document.querySelector('.pagination__btn-arrow-right')
+  const btnPrevPagination = document.querySelector('.pagination__btn-arrow-left');
+  const btnNextPagination = document.querySelector('.pagination__btn-arrow-right');
 
   const renderProducts = (products, container, numberOfProducts, page) => {
-    catalogProductList.innerHTML = "";
-    const firstProductIndex = numberOfProducts * page - numberOfProducts;
-    const lastProductIndex = firstProductIndex + numberOfProducts;
-    const productsOnPage = products.slice(firstProductIndex, lastProductIndex);
+    container.innerHTML = "";
+    const start = (page - 1) * numberOfProducts;
+    const end = start + numberOfProducts;
+    const productsOnPage = products.slice(start, end);
 
     productsOnPage.forEach((product) => {
       const li = document.createElement('li');
       li.classList.add('product-carousel__list-item', 'catalog-product__list-item');
-
       li.innerHTML = `
-                <a href="#">
-                  <div class="product-carousel__item-header catalog-carousel__item-header">
-                    <img class="product-carousel__item-header-img" src="${product.image}"
-                      alt="замок golden soft дверной для отеля">
-                    <div class="product-carousel__item-header-block">
-                      <div class="product-carousel__item-header-presence">
-                        <div class="product-carousel__item-header-presence-box">
-                        ${product.status.svg}
-                        </div>
-                        <span class="product-carousel__item-header-presence-text">${product.status.check}</span>
-                      </div>
-                      <div class="product-carousel__item-header-gift">
+        <a href="#">
+          <div class="product-carousel__item-header catalog-carousel__item-header">
+            <img class="product-carousel__item-header-img" src="${product.image}" alt="${product.name}">
+            <div class="product-carousel__item-header-block">
+              <div class="product-carousel__item-header-presence">
+                <div class="product-carousel__item-header-presence-box">
+                  ${product.status.svg}
+                </div>
+                <span class="product-carousel__item-header-presence-text">${product.status.check}</span>
+              </div>
+              <div class="product-carousel__item-header-gift">
                         <svg class="product-carousel__item-header-gift-img" width="12" height="12" viewBox="0 0 12 12"
                           fill="none" xmlns="http://www.w3.org/2000/svg">
                           <g clip-path="url(#clip0_21745_3811)">
@@ -58,68 +54,51 @@ const paginate = (products) => {
                         </svg>
                         <p class="product-carousel__item-header-gift-text">Подарок</p>
                       </div>
-                    </div>
+            </div>
+            <p class="product-carousel__item-header-sale">SALE</p>
+          </div>
+          <div class="product-carousel__list-item-descr catalog-carousel__list-item-descr">
+            <div class="reviews">
+              <div class="reviews__stars">
+                <span class="reviews__stars-star reviews__stars-star__active"></span>
+                <span class="reviews__stars-star reviews__stars-star__active"></span>
+                <span class="reviews__stars-star reviews__stars-star__active"></span>
+                <span class="reviews__stars-star"></span>
+                <span class="reviews__stars-star"></span>
+              </div>
+              <span class="reviews__count">(12) отзывов</span>
+            </div>
+            <p class="product-carousel__list-item-descr-title">${product.name}</p>
+            <p class="product-carousel__list-item-descr-price">
+              <span class="product-carousel__list-item-descr-price-new">${product.price.new}</span>
+              <span class="product-carousel__list-item-descr-price-old">${product.price.old}</span>
+            </p>
+          </div>
+        </a>`;
+      container.append(li);
+    });
 
-                    <p class="product-carousel__item-header-sale">SALE</p>
-
-                  </div>
-
-                  <div class="product-carousel__list-item-descr catalog-carousel__list-item-descr">
-
-                    <div class="reviews">
-                      <div class="reviews__stars">
-                        <span class="reviews__stars-star reviews__stars-star__active"></span>
-                        <span class="reviews__stars-star reviews__stars-star__active"></span>
-                        <span class="reviews__stars-star reviews__stars-star__active"></span>
-                        <span class="reviews__stars-star"></span>
-                        <span class="reviews__stars-star"></span>
-                      </div>
-                      <span class="reviews__count">(12) отзывов</span>
-                    </div>
-
-                    <p class="product-carousel__list-item-descr-title">
-                      ${product.name}
-                    </p>
-                    <p class="product-carousel__list-item-descr-price">
-                      <span class="product-carousel__list-item-descr-price-new">${product.price.new}</span>
-                      <span class="product-carousel__list-item-descr-price-old">${product.price.old}</span>
-                    </p>
-                  </div>
-                </a>
-            `
-      container.append(li)
-    })
+    updateArrows();
   };
-
-  const renderPaginations = (products, productCount) => {
-    const pageCount = Math.ceil(products.length / productCount);
-    const ul = document.querySelector('.pagination__list');
-    ul.innerHTML = '';
-
-    if (pageCount <= 7) {
-      for (let i = 1; i <= pageCount; i++) {
-        const li = renderBtn(i, currentPage);
-        ul.append(li);
-      }
-      return;
-    }
-
-    ul.append(renderBtn(currentPage))
-    
-  }
 
 
   const renderBtn = (page) => {
-
     const li = document.createElement("li");
     li.classList.add('pagination__list-item');
     li.textContent = page;
 
     if (currentPage === page) {
-      li.classList.add("pagination__list-item__active")
+      li.classList.add("pagination__list-item__active");
     }
+
+    li.addEventListener("click", () => {
+      currentPage = page;
+      renderProducts(products, catalogProductList, productCount, currentPage);
+      renderPaginations(products, productCount, currentPage);
+    });
+
     return li;
-  }
+  };
 
   const renderDot = () => {
     const li = document.createElement("li");
@@ -128,66 +107,82 @@ const paginate = (products) => {
     return li;
   };
 
+  const renderPaginations = (products, productCount, currentPage) => {
+    const pageCount = Math.ceil(products.length / productCount);
+    const ul = document.querySelector('.pagination__list');
+    ul.innerHTML = '';
 
-  const updatePagination = () => {
-    pagination.addEventListener('click', (e) => {
-      if (!e.target.closest('.pagination__list-item')) {
-        return;
-      } else {
-        currentPage = e.target.textContent;
-        renderProducts(products, catalogProductList, productCount, currentPage);
-        let currentLi = document.querySelector('.pagination__list-item__active');
-        currentLi.classList.remove('pagination__list-item__active');
-        e.target.classList.add('pagination__list-item__active')
+    if (pageCount <= 7) {
+      for (let i = 1; i <= pageCount; i++) {
+        ul.append(renderBtn(i));
       }
-    })
-  }
-
-  renderProducts(products, catalogProductList, productCount, currentPage);
-  renderPaginations(products, productCount);
-  updatePagination();
-
-  const liElements = document.querySelectorAll('.pagination__list-item');
-
-  const handlePagination = (e) => {
-    const currentActiveLi = document.querySelector('.pagination__list-item__active')
-    let newActiveLi;
-
-    if (e.target.closest('.pagination__btn-next')) {
-      newActiveLi = currentActiveLi.nextElementSibling;
     } else {
-      newActiveLi = currentActiveLi.previousElementSibling;
+      ul.append(renderBtn(1));
+      if (currentPage < 5) {
+        for (let i = 2; i <= 5; i++) {
+          ul.append(renderBtn(i));
+        }
+        ul.append(renderDot());
+        ul.append(renderBtn(pageCount));
+      } else if (currentPage > pageCount - 4) {
+        ul.append(renderDot());
+        for (let i = pageCount - 4; i <= pageCount; i++) {
+          ul.append(renderBtn(i));
+        }
+      } else {
+        ul.append(renderDot());
+        for (let i = currentPage - 1; i <= currentPage + 1; i++) {
+          ul.append(renderBtn(i));
+        }
+        ul.append(renderDot());
+        ul.append(renderBtn(pageCount));
+      }
     }
 
-    if (!newActiveLi && e.target.closest('.pagination__btn-next')) {
-      newActiveLi = liElements[0];
-    } else if (!newActiveLi) {
-      newActiveLi = liElements[liElements.length - 1];
-    }
-
-    currentActiveLi.classList.remove('pagination__list-item__active');
-    newActiveLi.classList.add('pagination__list-item__active');
-
-    // Проверка на активные стрелки right and left
-    if (newActiveLi === liElements[0]) {
-      btnPrevPagination.classList.remove("pagination__btn-arrow__active")
-    } else {
-      btnPrevPagination.classList.add("pagination__btn-arrow__active")
-    }
-
-    if (newActiveLi === liElements[liElements.length - 1]) {
-      btnNextPagination.classList.remove("pagination__btn-arrow__active")
-    } else {
-      btnNextPagination.classList.add("pagination__btn-arrow__active")
-    }
-
-    renderProducts(products, catalogProductList, productCount, currentPage,)
-
+    updateArrows();
   };
 
-  btnNextPagination.addEventListener('click', handlePagination)
-  btnPrevPagination.addEventListener('click', handlePagination)
-};
+  const updateArrows = () => {
+    const pageCount = Math.ceil(products.length / productCount);
 
+    if (currentPage === 1) {
+      btnPrevPagination.classList.remove("pagination__btn-arrow__active");
+    } else {
+      btnPrevPagination.classList.add("pagination__btn-arrow__active");
+    }
+
+    if (currentPage === pageCount) {
+      btnNextPagination.classList.remove("pagination__btn-arrow__active");
+    } else {
+      btnNextPagination.classList.add("pagination__btn-arrow__active");
+    }
+  };
+
+  const handlePaginationArrows = () => {
+    updateArrows(); // Устанавливаем состояние стрелок при инициализации
+
+    btnNextPagination.addEventListener("click", () => {
+      if (currentPage < Math.ceil(products.length / productCount)) {
+        currentPage++;
+        renderProducts(products, catalogProductList, productCount, currentPage);
+        renderPaginations(products, productCount, currentPage);
+        updateArrows(); // Обновляем состояние после клика
+      }
+    });
+
+    btnPrevPagination.addEventListener("click", () => {
+      if (currentPage > 1) {
+        currentPage--;
+        renderProducts(products, catalogProductList, productCount, currentPage);
+        renderPaginations(products, productCount, currentPage);
+        updateArrows(); // Обновляем состояние после клика
+      }
+    });
+  };
+
+  renderProducts(products, catalogProductList, productCount, currentPage);
+  renderPaginations(products, productCount, currentPage);
+  handlePaginationArrows();
+};
 
 export default paginate;

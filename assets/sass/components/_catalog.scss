@@ -340,7 +340,7 @@ input[type="checkbox"]:checked+.sidebar__checkbox-list-item-label-custom::after 
 .catalog-sidebar__filters-size {}
 
 .catalog-product {
-
+    margin-bottom: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -376,11 +376,10 @@ input[type="checkbox"]:checked+.sidebar__checkbox-list-item-label-custom::after 
 
 
 .catalog-product__list {
-    margin-bottom: 0;
     display: flex;
-    gap: 0;
     font-family: "SFT";
-    justify-content: space-between;
+    gap: 42px 49px;
+    justify-content: flex-start;
 }
 
 .catalog-product__list-item {
@@ -388,7 +387,6 @@ input[type="checkbox"]:checked+.sidebar__checkbox-list-item-label-custom::after 
     max-width: 290px;
     position: relative;
     background: none;
-    margin-bottom: 40px;
 }
 
 .catalog-carousel__item-header {
