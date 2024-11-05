@@ -358,6 +358,7 @@ input[type="checkbox"]:checked+.sidebar__checkbox-list-item-label-custom::after 
 }
 
 .catalog-product__block {
+    width: 100%;
     margin-bottom: 46px;
     display: flex;
     justify-content: space-between;
@@ -365,6 +366,7 @@ input[type="checkbox"]:checked+.sidebar__checkbox-list-item-label-custom::after 
 }
 
 .catalog-product__block-tags {
+    position: relative;
     font-family: "SFT", sans-serif;
     font-size: 14px;
     font-weight: 400;
@@ -372,7 +374,54 @@ input[type="checkbox"]:checked+.sidebar__checkbox-list-item-label-custom::after 
     line-height: 24px;
 }
 
-.catalog-product__block-dropdown {}
+.catalog-product__block-tags-cross {
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    stroke: rgb(22, 28, 36);
+    position: absolute;
+    top: 3px;
+    right: -23px;
+    transition: all .14s ease-in;
+
+    &:hover {
+        stroke: rgb(228, 66, 134);
+    }
+}
+
+.catalog-product__block-dropdown{
+    padding: 7px 16px;
+    border: 1px solid rgb(196, 205, 213);
+    cursor: pointer;
+
+    &:hover svg {
+        
+        stroke: rgb(66, 149, 228);
+    }
+}
+
+
+.catalog-product__block-dropdown-text {
+    display: inline;
+    font-family: "SFT", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: rgb(22, 28, 36);
+    
+}
+
+.catalog-product__block-dropdown-unfold {
+    display: inline;
+    margin-left: 26px;
+    fill: none;
+    stroke: black;
+    transition: all .15s ease-in;
+}
+
+.catalog-product__block-dropdown-modal {
+    position: absolute;
+}
 
 
 .catalog-product__list {
