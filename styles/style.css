@@ -1635,8 +1635,9 @@ input[type=checkbox]:checked + .sidebar__checkbox-list-item-label-custom::after 
 }
 
 .catalog-product__block {
+  position: relative;
   width: 100%;
-  margin-bottom: 46px;
+  margin-bottom: 27px;
   display: flex;
   justify-content: space-between;
   align-content: center;
@@ -1669,33 +1670,82 @@ input[type=checkbox]:checked + .sidebar__checkbox-list-item-label-custom::after 
   padding: 7px 16px;
   border: 1px solid rgb(196, 205, 213);
   cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.catalog-product__block-dropdown:hover .catalog-product__block-dropdown-text {
+  color: rgb(66, 149, 228);
 }
 .catalog-product__block-dropdown:hover svg {
   stroke: rgb(66, 149, 228);
 }
 
 .catalog-product__block-dropdown-text {
-  display: inline;
+  display: inline-block;
   font-family: "SFT", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
   color: rgb(22, 28, 36);
+  transition: all 0.1s ease-in;
 }
 
 .catalog-product__block-dropdown-unfold {
-  display: inline;
+  display: inline-block;
   margin-left: 26px;
   fill: none;
   stroke: black;
-  transition: all 0.15s ease-in;
+  transition: all 0.1s ease-in;
 }
 
-.catalog-product__block-dropdown-modal {
+.catalog-product__block-dropdown-unfold__active {
+  transform: rotate(-180deg);
+  stroke: rgb(66, 149, 228);
+}
+
+.catalog-product__dropdown-modal {
+  display: none;
+  z-index: 1000;
   position: absolute;
+  top: 47px;
+  right: 0;
+  width: 212px;
+}
+
+.catalog-product__dropdown-modal__active {
+  display: block;
+}
+
+.catalog-product__dropdown-modal-list {
+  box-shadow: 0px 4px 15px -2px rgba(0, 0, 0, 0.1019607843);
+  background: #fff;
+  width: 100%;
+}
+
+.catalog-product__dropdown-modal-list-item {
+  cursor: pointer;
+  display: flex;
+  padding: 10px;
+  transition: all 0.1s ease-in;
+}
+.catalog-product__dropdown-modal-list-item:hover {
+  background: #F7FBFE;
+}
+.catalog-product__dropdown-modal-list-item:hover .catalog-product__dropdown-modal-list-item-text {
+  color: #4295E4;
+}
+
+.catalog-product__dropdown-modal-list-item-text {
+  font-family: "SFT", sans-serif;
+  color: rgb(22, 28, 36);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  transition: all 0.1s ease-in;
 }
 
 .catalog-product__list {
+  margin-bottom: 26px;
   display: flex;
   font-family: "SFT";
   gap: 42px 49px;
