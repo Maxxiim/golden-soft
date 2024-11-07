@@ -134,7 +134,7 @@ const products = [
         },
 
         price: {
-            new: 33000,
+            new: 31000,
             old: 39000,
         },
 
@@ -332,7 +332,7 @@ const products = [
         },
 
         price: {
-            new: 33000,
+            new: 31000,
             old: 39000,
         },
 

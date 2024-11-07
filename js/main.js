@@ -1,17 +1,4 @@
-import products from "./products";
-
-import paginate from "./modules/pagination";
-
-window.addEventListener('DOMContentLoaded', () => {
-    const productList = document.querySelector('.catalog-product__list');
-
-    paginate(products)
-})
-
-
-
 // header-modal index.html
-
 const headerModal = document.querySelector('.header-modal');
 const btnCatalog = document.querySelector('.header-nav__list-item-catalog');
 const btnCatalogUnfold = document.querySelector(".header-nav__list-item-unfold")
@@ -81,7 +68,6 @@ btnRight.addEventListener('click', showNextProduct);
 showCurrentProduct();
 
 // ====================================================================================
-
 // product slider index.html
 
 let position = 0;
@@ -118,7 +104,6 @@ prevBtn.addEventListener('click', () => {
     checkBtns();
 });
 
-
 const setPosition = () => {
     productList.style.transform = `translateX(${position}px)`;
 };
@@ -143,80 +128,3 @@ const checkBtns = () => {
         nextBtn.classList.add("popular__arrow-right");
     }
 };
-
-// sidebar filters category.html
-const showBlocksSidebar = document.querySelectorAll('.catalog-sidebar__filters-item-block');
-
-showBlocksSidebar.forEach(block => {
-
-    block.addEventListener('click', () => {
-
-        const blockSliderPrice = block.closest('.catalog-sidebar__filters-item').querySelector('.sidebar__filters-price-slider');
-        const checkboxList = block.closest('.catalog-sidebar__filters-item').querySelector('.sidebar__checkbox-list');
-        const unfoldSpan = block.querySelector('.catalog-sidebar__filters-item-unfold');
-
-        if (blockSliderPrice) {
-            if (blockSliderPrice.classList.contains('sidebar__filters-price-slider__active')) {
-                blockSliderPrice.classList.remove('sidebar__filters-price-slider__active');
-                unfoldSpan.classList.remove('catalog-sidebar__filters-item-unfold__active');
-            } else {
-                blockSliderPrice.classList.add('sidebar__filters-price-slider__active');
-                unfoldSpan.classList.add('catalog-sidebar__filters-item-unfold__active');
-            };
-        };
-        if (checkboxList) {
-            if (checkboxList.classList.contains('sidebar__active')) {
-                checkboxList.classList.remove('sidebar__active');
-                unfoldSpan.classList.remove('catalog-sidebar__filters-item-unfold__active');
-            } else {
-                checkboxList.classList.add('sidebar__active');
-                unfoldSpan.classList.add('catalog-sidebar__filters-item-unfold__active');
-            };
-        };
-    });
-});
-
-// sidebar slider price
-
-const rangeInput = document.querySelectorAll('.sidebar__filters-price-slider-range input');
-const progress = document.querySelector('.sidebar__filters-price-slider-controller-progress');
-const priceInput = document.querySelectorAll('.sidebar__filters-price-slider-field input');
-
-let priceGap = 15000;
-
-priceInput.forEach((input) => {
-    input.addEventListener('input', (e) => {
-        let minRange = parseInt(priceInput[0].value);
-        let maxRange = parseInt(priceInput[1].value);
-
-        if ((maxRange - minRange >= priceGap) && maxRange <= 100000) {
-            if (e.target.className === 'sidebar__filters-price-slider-field-min') {
-                rangeInput[0].value = minRange;
-                progress.style.left = (minRange / rangeInput[0].max) * 100 + "%";
-            } else {
-                rangeInput[1].value = maxRange;
-                progress.style.right = 100 - (maxRange / rangeInput[1].max) * 100 + "%";
-            }
-        }
-    })
-});
-
-rangeInput.forEach((input) => {
-    input.addEventListener('input', (e) => {
-        let minRange = parseInt(rangeInput[0].value);
-        let maxRange = parseInt(rangeInput[1].value);
-
-        if (maxRange - minRange < priceGap) {
-            if (e.target.id === 'minInput') {
-                rangeInput[0].value = maxRange - priceGap;
-            } else {
-                rangeInput[1].value = minRange + priceGap;
-            }
-        } else {
-            priceInput[0].value = minRange;
-            priceInput[1].value = maxRange;
-            progress.style.left = (minRange / rangeInput[0].max) * 100 + "%";
-            progress.style.right = 100 - (maxRange / rangeInput[1].max) * 100 + "%";
-        }
-    })
-});

@@ -14,20 +14,20 @@ const paginate = (products) => {
 
     productsOnPage.forEach((product) => {
       const li = document.createElement('li');
-      li.classList.add('product-carousel__list-item', 'catalog-product__list-item');
+      li.classList.add('.catalog-carousel__list-item');
       li.innerHTML = `
-        <a href="#">
-          <div class="product-carousel__item-header catalog-carousel__item-header">
-            <img class="product-carousel__item-header-img" src="${product.image}" alt="${product.name}">
-            <div class="product-carousel__item-header-block">
-              <div class="product-carousel__item-header-presence">
-                <div class="product-carousel__item-header-presence-box">
-                  ${product.status.svg}
-                </div>
-                <span class="product-carousel__item-header-presence-text">${product.status.check}</span>
-              </div>
-              <div class="product-carousel__item-header-gift">
-                        <svg class="product-carousel__item-header-gift-img" width="12" height="12" viewBox="0 0 12 12"
+      <a href="#">
+                  <div class="catalog-carousel__item-header">
+                    <img class="catalog-carousel__item-header-img" src="${product.image}" alt="${product.name}">
+                    <div class="catalog-carousel__item-header-block">
+                      <div class="catalog-carousel__item-header-presence">
+                        <div class="catalog-carousel__item-header-presence-box">
+                        ${product.status.svg}
+                        </div>
+                        <span class="catalog-carousel__item-header-presence-text">${product.status.check}</span>
+                      </div>
+                      <div class="catalog-carousel__item-header-gift">
+                        <svg class="catalog-carousel__item-header-gift-img" width="12" height="12" viewBox="0 0 12 12"
                           fill="none" xmlns="http://www.w3.org/2000/svg">
                           <g clip-path="url(#clip0_21745_3811)">
                             <path
@@ -52,29 +52,37 @@ const paginate = (products) => {
                             </clipPath>
                           </defs>
                         </svg>
-                        <p class="product-carousel__item-header-gift-text">Подарок</p>
+                        <p class="catalog-carousel__item-header-gift-text">Подарок</p>
                       </div>
-            </div>
-            <p class="product-carousel__item-header-sale">SALE</p>
-          </div>
-          <div class="product-carousel__list-item-descr catalog-carousel__list-item-descr">
-            <div class="reviews">
-              <div class="reviews__stars">
-                <span class="reviews__stars-star reviews__stars-star__active"></span>
-                <span class="reviews__stars-star reviews__stars-star__active"></span>
-                <span class="reviews__stars-star reviews__stars-star__active"></span>
-                <span class="reviews__stars-star"></span>
-                <span class="reviews__stars-star"></span>
-              </div>
-              <span class="reviews__count">(12) отзывов</span>
-            </div>
-            <p class="product-carousel__list-item-descr-title">${product.name}</p>
-            <p class="product-carousel__list-item-descr-price">
-              <span class="product-carousel__list-item-descr-price-new">${product.price.new}</span>
-              <span class="product-carousel__list-item-descr-price-old">${product.price.old}</span>
-            </p>
-          </div>
-        </a>`;
+                    </div>
+
+                    <p class="catalog-carousel__item-header-sale">SALE</p>
+
+                  </div>
+
+                  <div class="catalog-carousel__list-item-descr">
+
+                    <div class="reviews">
+                      <div class="reviews__stars">
+                        <span class="reviews__stars-star reviews__stars-star__active"></span>
+                        <span class="reviews__stars-star reviews__stars-star__active"></span>
+                        <span class="reviews__stars-star reviews__stars-star__active"></span>
+                        <span class="reviews__stars-star"></span>
+                        <span class="reviews__stars-star"></span>
+                      </div>
+                      <span class="reviews__count">(12) отзывов</span>
+                    </div>
+
+                    <p class="catalog-carousel__list-item-descr-title">
+                    ${product.name}
+                    </p>
+                    <p class="catalog-carousel__list-item-descr-price">
+                      <span class="catalog-carousel__list-item-descr-price-new">${product.price.new}</span>
+                      <span class="catalog-carousel__list-item-descr-price-old">${product.price.old}</span>
+                    </p>
+                  </div>
+                </a>`
+
       container.append(li);
     });
 
@@ -159,14 +167,14 @@ const paginate = (products) => {
   };
 
   const handlePaginationArrows = () => {
-    updateArrows(); // Устанавливаем состояние стрелок при инициализации
+    updateArrows();
 
     btnNextPagination.addEventListener("click", () => {
       if (currentPage < Math.ceil(products.length / productCount)) {
         currentPage++;
         renderProducts(products, catalogProductList, productCount, currentPage);
         renderPaginations(products, productCount, currentPage);
-        updateArrows(); // Обновляем состояние после клика
+        updateArrows();
       }
     });
 
@@ -175,7 +183,7 @@ const paginate = (products) => {
         currentPage--;
         renderProducts(products, catalogProductList, productCount, currentPage);
         renderPaginations(products, productCount, currentPage);
-        updateArrows(); // Обновляем состояние после клика
+        updateArrows();
       }
     });
   };
