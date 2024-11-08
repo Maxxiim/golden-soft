@@ -49,7 +49,6 @@
 .product-carousel__list {
     margin-bottom: 96px;
     display: flex;
-    gap: 32px;
     transition: .2s;
 }
 
@@ -58,6 +57,7 @@
     width: 288px;
     max-width: 290px;
     position: relative;
+    margin-right: 25px;
 }
 
 .product-carousel__item-header {
@@ -96,8 +96,6 @@
     position: relative;
     justify-content: center;
     margin-right: 8px;
-    width: 8px;
-    height: 10px;
     background: #fff;
 }
 
@@ -116,7 +114,7 @@
 }
 
 .product-carousel__item-header-gift {
-    width: 80px;
+    width: 90px;
     display: flex;
     align-items: center;
     padding: 6px 8px;

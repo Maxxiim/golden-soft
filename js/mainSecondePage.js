@@ -175,16 +175,31 @@ const checkBtns = () => {
 // ==========================================================
 // catalog field Dropdown modal 
 const fieldDropdown = document.getElementById('fieldDropdown');
+const unfoldArrow = document.querySelector('.catalog-product__block-dropdown-unfold');
 const modalItems = document.querySelectorAll('.catalog-product__dropdown-modal-list-item');
+const modalDropdown = document.getElementById('modalDropdown');
 
-function unfoldModalDropdown() {
-    const unfoldArrow = document.querySelector('.catalog-product__block-dropdown-unfold');
-    const modalDropdown = document.getElementById('modalDropdown');
-
+function unfoldModalDropdown(e) {
     if (fieldDropdown) {
         modalDropdown.classList.toggle('catalog-product__dropdown-modal__active');
-        unfoldArrow.classList.toggle('catalog-product__block-dropdown-unfold__active')
-    } else return;
+        unfoldArrow.classList.toggle('catalog-product__block-dropdown-unfold__active');
+    }
 };
 
+function closeModalDropdown(e) {
+    if (!modalDropdown.contains(e.target) && !fieldDropdown.contains(e.target)) {
+        modalDropdown.classList.remove('catalog-product__dropdown-modal__active');
+        unfoldArrow.classList.remove('catalog-product__block-dropdown-unfold__active');
+    }
+}
+
+modalItems.forEach((text) => {
+    text.addEventListener('click', () => {
+        document.getElementById('fieldDropdownText').innerText =  text.innerText; 
+        modalDropdown.classList.remove('catalog-product__dropdown-modal__active');
+        unfoldArrow.classList.remove('catalog-product__block-dropdown-unfold__active');
+    })
+})
+
+document.addEventListener('click', closeModalDropdown);
 fieldDropdown.addEventListener('click', unfoldModalDropdown);

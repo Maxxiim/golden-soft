@@ -92,6 +92,12 @@
   box-sizing: border-box;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 h1,
 h2,
 h3,
@@ -266,7 +272,7 @@ body {
   font-family: "SFD";
   color: #fff;
   margin-right: 153px;
-  margin-left: 350px;
+  margin-left: 348px;
   letter-spacing: 2.8px;
   max-width: 575px;
 }
@@ -764,7 +770,7 @@ body {
 
 .categories__list {
   display: flex;
-  gap: 40px 74px;
+  gap: 40px 45px;
   flex-wrap: wrap;
   margin-bottom: 50px;
   align-items: center;
@@ -891,7 +897,6 @@ body {
 .product-carousel__list {
   margin-bottom: 96px;
   display: flex;
-  gap: 32px;
   transition: 0.2s;
 }
 
@@ -900,6 +905,7 @@ body {
   width: 288px;
   max-width: 290px;
   position: relative;
+  margin-right: 25px;
 }
 
 .product-carousel__item-header {
@@ -938,8 +944,6 @@ body {
   position: relative;
   justify-content: center;
   margin-right: 8px;
-  width: 8px;
-  height: 10px;
   background: #fff;
 }
 
@@ -958,7 +962,7 @@ body {
 }
 
 .product-carousel__item-header-gift {
-  width: 80px;
+  width: 90px;
   display: flex;
   align-items: center;
   padding: 6px 8px;
@@ -1659,13 +1663,14 @@ input[type=checkbox]:checked + .sidebar__checkbox-list-item-label-custom::after 
 }
 
 .catalog-carousel__item-header-presence-box {
+  align-items: center;
+  width: 20px;
+  height: 20px;
   padding: 7px 6px;
   display: flex;
   position: relative;
   justify-content: center;
   margin-right: 8px;
-  width: 8px;
-  height: 10px;
   background: #fff;
 }
 
@@ -1678,7 +1683,7 @@ input[type=checkbox]:checked + .sidebar__checkbox-list-item-label-custom::after 
 }
 
 .catalog-carousel__item-header-gift {
-  width: 80px;
+  width: 90px;
   display: flex;
   align-items: center;
   padding: 6px 8px;
@@ -1797,11 +1802,13 @@ input[type=checkbox]:checked + .sidebar__checkbox-list-item-label-custom::after 
 }
 
 .catalog-product__block-dropdown {
-  padding: 7px 16px;
+  padding: 7px;
   border: 1px solid rgb(196, 205, 213);
   cursor: pointer;
   display: flex;
   align-items: center;
+  width: 100%;
+  max-width: 210px;
 }
 .catalog-product__block-dropdown:hover .catalog-product__block-dropdown-text {
   color: rgb(66, 149, 228);
@@ -1812,21 +1819,22 @@ input[type=checkbox]:checked + .sidebar__checkbox-list-item-label-custom::after 
 
 .catalog-product__block-dropdown-text {
   user-select: none;
-  display: inline-block;
+  display: inline;
   font-family: "SFT", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
   color: rgb(22, 28, 36);
   transition: all 0.1s ease-in;
+  width: 100%;
+  max-width: 180px;
 }
 
 .catalog-product__block-dropdown-unfold {
   display: inline-block;
-  margin-left: 26px;
   fill: none;
   stroke: black;
-  transition: all 0.1s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .catalog-product__block-dropdown-unfold__active {
@@ -1879,7 +1887,9 @@ input[type=checkbox]:checked + .sidebar__checkbox-list-item-label-custom::after 
   margin-bottom: 26px;
   flex-wrap: wrap;
   display: flex;
-  gap: 42px 35px;
+  gap: 42px 20px;
+  width: 100%;
+  max-width: 937px;
   justify-content: flex-start;
 }
 
