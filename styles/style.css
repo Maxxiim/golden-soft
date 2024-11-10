@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 :root {
   --primary: #454F5B;
   --bg: #fff;
@@ -9,31 +10,37 @@
   src: url("/assets/fonts/sfprotext/SFProText-Regular.ttf");
   font-weight: 400;
 }
+
 @font-face {
   font-family: "SFT-italic";
   src: url("/assets/fonts/sfprotext/SFProText-RegularItalic.ttf");
   font-weight: 400;
 }
+
 @font-face {
   font-family: "SFT-light";
   src: url("/assets/fonts/sfprotext/SFProText-Light.ttf");
   font-weight: 300;
 }
+
 @font-face {
   font-family: "SFT-medium";
   src: url("/assets/fonts/sfprotext/SFProText-Medium.ttf");
   font-weight: 500;
 }
+
 @font-face {
   font-family: "SFT-bold";
   src: url("/assets/fonts/sfprotext/SFProText-Bold.ttf");
   font-weight: 600;
 }
+
 @font-face {
   font-family: "SFT-semibold";
   src: url("/assets/fonts/sfprotext/SFProText-Semibold.ttf");
   font-weight: 600;
 }
+
 @font-face {
   font-family: "SFD-medium";
   src: url("/assets/fonts/sfprodisp/SFProDisplay-Medium.ttf");
@@ -42,6 +49,7 @@
   src: url("/assets/fonts/sfprodisp/SFProDisplay-Medium.woff2");
   font-weight: 500;
 }
+
 @font-face {
   font-family: "SFD";
   src: url("/assets/fonts/sfprodisp/SFProDisplay-Regular.ttf");
@@ -50,6 +58,7 @@
   src: url("/assets/fonts/sfprodisp/SFProDisplay-Regular.woff2");
   font-weight: 400;
 }
+
 @font-face {
   font-family: "SFD-semibold";
   src: url("/assets/fonts/sfprodisp/SFProDisplay-Semibold.ttf");
@@ -58,6 +67,7 @@
   src: url("/assets/fonts/sfprodisp/SFProDisplay-Semibold.woff2");
   font-weight: 600;
 }
+
 @font-face {
   font-family: "SFD-light";
   src: url("/assets/fonts/sfprodisp/SFProDisplay-Light.ttf");
@@ -66,6 +76,7 @@
   src: url("/assets/fonts/sfprodisp/SFProDisplay-Light.woff2");
   font-weight: 300;
 }
+
 @font-face {
   font-family: "Helvetica-roman";
   src: url("/assets/fonts/helvetica/HelveticaNeueCyr-Roman.eot");
@@ -73,6 +84,7 @@
   src: url("/assets/fonts/helvetica/HelveticaNeueCyr-Roman.woff");
   font-weight: 400;
 }
+
 @font-face {
   font-family: "Helvetica-medium";
   src: url("/assets/fonts/helvetica/HelveticaNeueCyr-Medium.eot");
@@ -80,6 +92,7 @@
   src: url("/assets/fonts/helvetica/HelveticaNeueCyr-Medium.woff");
   font-weight: 500;
 }
+
 @font-face {
   font-family: "Roboto";
   src: url("/assets/fonts/roboto/Roboto-Medium.eot");
@@ -87,6 +100,7 @@
   src: url("/assets/fonts/roboto/Roboto-Medium.woff");
   font-weight: 400;
 }
+
 *::before,
 ::after {
   box-sizing: border-box;
@@ -122,6 +136,7 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
+
 .container-banner {
   width: 100%;
   display: flex;
@@ -141,6 +156,7 @@ body {
   background-color: rgb(66, 149, 228);
   transition: all 0.1s ease-in;
 }
+
 .btn:hover {
   background-color: rgb(48, 132, 211);
 }
@@ -276,6 +292,7 @@ body {
   letter-spacing: 2.8px;
   max-width: 575px;
 }
+
 .header-banner__text:last-child {
   margin-right: 0;
 }
@@ -290,6 +307,7 @@ body {
   letter-spacing: 3.1px;
   max-width: 172px;
 }
+
 .header-banner__text-call a {
   text-decoration: none;
   display: inline-flex;
@@ -297,6 +315,7 @@ body {
   color: #fff;
   cursor: pointer;
 }
+
 .header-banner__text-call:hover {
   border-bottom: 2px solid #fff;
 }
@@ -335,13 +354,16 @@ body {
   font-size: 20px;
   max-width: 180px;
 }
+
 .header-nav__list-item a {
   font-family: "SFT-light";
   color: rgb(22, 28, 36);
 }
+
 .header-nav__list-item:hover a {
   font-family: "SFT";
 }
+
 .header-nav__list-item:last-child {
   margin-right: 0;
 }
@@ -385,6 +407,7 @@ body {
   color: rgb(69, 79, 91);
   transition: all 0.2s ease-in;
 }
+
 .header-nav__actions-call-text:hover {
   color: #4295E4;
 }
@@ -397,6 +420,7 @@ body {
   stroke: rgb(69, 79, 91);
   transition: all 0.15s ease-in;
 }
+
 .header-nav__actions-likes:hover {
   stroke: #4295E4;
 }
@@ -407,6 +431,7 @@ body {
   stroke: rgb(69, 79, 91);
   transition: all 0.15s ease-in;
 }
+
 .header-nav__actions-basket:hover {
   stroke: #4295E4;
 }
@@ -453,6 +478,7 @@ body {
   font-size: 16px;
   line-height: 26px;
 }
+
 .header-modal__list-item-name__active:before {
   content: "";
   position: absolute;
@@ -542,6 +568,7 @@ body {
   font-size: 14px;
   margin-bottom: 21px;
 }
+
 .product-list__item-descr-text:last-child {
   margin-bottom: 30px;
 }
@@ -568,6 +595,7 @@ body {
   font-size: 24px;
   color: rgb(22, 28, 36);
 }
+
 .product-list__item-price-old::after {
   content: "₽";
 }
@@ -580,9 +608,11 @@ body {
   font-weight: 300;
   color: rgb(164, 164, 164);
 }
+
 .product-list__item-price-new::after {
   content: "₽";
 }
+
 .product-list__item-price-new::before {
   content: "";
   position: absolute;
@@ -633,6 +663,7 @@ body {
   border-radius: 50%;
   transition: all 0.2s ease;
 }
+
 .controls__dots-item:hover {
   background: rgb(131, 172, 210);
 }
@@ -646,6 +677,7 @@ body {
   border-radius: 50%;
   transition: all 0.2s ease;
 }
+
 .controls__dots-item-active:after {
   content: "";
   position: absolute;
@@ -656,6 +688,7 @@ body {
   height: 12px;
   border-radius: 50%;
 }
+
 .controls__dots-item-active:hover {
   background: rgb(66, 149, 228);
 }
@@ -826,6 +859,7 @@ body {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
+
 .btn-categories__item:hover {
   background: grey;
   color: #fff;
@@ -842,9 +876,11 @@ body {
   text-align: center;
   transition: all 0.2s ease-in-out;
 }
+
 .btn-categories a {
   color: rgb(255, 255, 255);
 }
+
 .btn-categories:hover {
   background-color: rgb(48, 132, 211);
 }
@@ -1036,9 +1072,11 @@ body {
   line-height: 21px;
   color: rgb(69, 79, 91);
 }
+
 .product-carousel__list-item-descr-price-old::after {
   content: "₽";
 }
+
 .product-carousel__list-item-descr-price-old::after {
   content: "";
   position: absolute;
@@ -1104,6 +1142,7 @@ body {
   padding-right: 10px;
   background: rgba(22, 28, 36, 0.04);
 }
+
 .contact-form__input::placeholder {
   font-family: "SFT", sans-serif;
   font-weight: 400;
@@ -1111,6 +1150,7 @@ body {
   line-height: 26px;
   color: rgb(69, 79, 91);
 }
+
 .contact-form__input:focus {
   outline: none;
   border: none;
@@ -1162,6 +1202,7 @@ body {
   height: 26px;
   transition: all 0.2s ease-in-out;
 }
+
 .footer-social__list-item:hover {
   fill: rgb(48, 132, 211);
 }
@@ -1181,6 +1222,7 @@ body {
 .footer-nav__list-item {
   margin-right: 97px;
 }
+
 .footer-nav__list-item:last-child {
   margin-right: 0;
 }
@@ -1225,6 +1267,7 @@ body {
   margin-bottom: 16px;
   transition: all 0.15s ease;
 }
+
 .footer-nav__list-item-text:hover {
   color: rgb(66, 149, 228);
 }
@@ -1264,6 +1307,7 @@ body {
   line-height: 26px;
   color: rgb(20, 20, 20);
 }
+
 .page-way__start::after {
   content: "/";
   margin-left: 6px;
@@ -1302,6 +1346,7 @@ body {
   max-width: 290px;
   margin-bottom: 50px;
 }
+
 .catalog__content-list-item:last-child {
   margin-bottom: none;
 }
@@ -1369,6 +1414,7 @@ body {
   color: rgb(22, 28, 36);
   transition: all 0.15s ease-in;
 }
+
 .catalog-sidebar__reset:hover {
   background: rgb(48, 132, 211);
   color: rgb(255, 255, 255);
@@ -1415,6 +1461,7 @@ body {
   display: inline-flex;
   transition: all 0.15s ease-in;
 }
+
 .catalog-sidebar__filters-item-unfold:hover {
   stroke: rgb(66, 149, 228);
 }
@@ -1458,6 +1505,7 @@ input::-webkit-inner-spin-button {
   border: none;
   width: 95px;
 }
+
 .sidebar__filters-price-slider-field-min:focus {
   border: 1px solid rgb(66, 149, 228);
   outline: none;
@@ -1475,6 +1523,7 @@ input::-webkit-inner-spin-button {
   border: none;
   width: 95px;
 }
+
 .sidebar__filters-price-slider-field-max:focus {
   border: 1px solid rgb(66, 149, 228);
   outline: none;
@@ -1571,6 +1620,7 @@ input[type=checkbox] {
   display: inline-flex;
   align-items: center;
 }
+
 .sidebar__checkbox-list-item-label-custom::before {
   content: "";
   position: absolute;
@@ -1585,12 +1635,12 @@ input[type=checkbox] {
   transition: background-color 0.2s;
 }
 
-input[type=checkbox]:checked + .sidebar__checkbox-list-item-label-custom::before {
+input[type=checkbox]:checked+.sidebar__checkbox-list-item-label-custom::before {
   background: rgb(66, 149, 228);
   border: none;
 }
 
-input[type=checkbox]:checked + .sidebar__checkbox-list-item-label-custom::after {
+input[type=checkbox]:checked+.sidebar__checkbox-list-item-label-custom::after {
   content: "";
   position: absolute;
   left: 5px;
@@ -1757,9 +1807,11 @@ input[type=checkbox]:checked + .sidebar__checkbox-list-item-label-custom::after 
   line-height: 21px;
   color: rgb(69, 79, 91);
 }
+
 .catalog-carousel__list-item-descr-price-old::after {
   content: "₽";
 }
+
 .catalog-carousel__list-item-descr-price-old::after {
   content: "";
   position: absolute;
@@ -1797,6 +1849,7 @@ input[type=checkbox]:checked + .sidebar__checkbox-list-item-label-custom::after 
   right: -23px;
   transition: all 0.14s ease-in;
 }
+
 .catalog-product__block-tags-cross:hover {
   stroke: rgb(228, 66, 134);
 }
@@ -1810,9 +1863,11 @@ input[type=checkbox]:checked + .sidebar__checkbox-list-item-label-custom::after 
   width: 100%;
   max-width: 210px;
 }
+
 .catalog-product__block-dropdown:hover .catalog-product__block-dropdown-text {
   color: rgb(66, 149, 228);
 }
+
 .catalog-product__block-dropdown:hover svg {
   stroke: rgb(66, 149, 228);
 }
@@ -1867,9 +1922,11 @@ input[type=checkbox]:checked + .sidebar__checkbox-list-item-label-custom::after 
   padding: 10px;
   transition: all 0.1s ease-in;
 }
+
 .catalog-product__dropdown-modal-list-item:hover {
   background: #F7FBFE;
 }
+
 .catalog-product__dropdown-modal-list-item:hover .catalog-product__dropdown-modal-list-item-text {
   color: #4295E4;
 }
@@ -1907,6 +1964,153 @@ input[type=checkbox]:checked + .sidebar__checkbox-list-item-label-custom::after 
 
 .catalog-carousel__list-item-descr {
   padding: 0 12px 12px 14px;
+}
+
+.product {
+  padding-top: 20px;
+}
+
+.product__wrapper {
+  display: flex;
+}
+
+.product-slider {
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 604px;
+}
+
+.product-slider__main {
+  background: rgba(0, 0, 0, 0.03);
+  margin-bottom: 20px;
+}
+
+.product-slider__main-img {
+  width: 100%;
+  height: auto;
+}
+
+.product-slider__thumbnails-list {
+  display: flex;
+}
+
+.product-slider__thumbnails-list-item {
+  cursor: pointer;
+  border: 1px solid rgb(234, 234, 234);
+  max-width: 143px;
+  width: 100%;
+  height: auto;
+  margin-right: 12px;
+  transition: all 0.1s ease-in;
+}
+
+.product-slider__thumbnails-list-item:hover {
+  background: rgba(125, 190, 255, 0.07);
+}
+
+.product-slider__thumbnails-list-item:last-child {
+  margin-right: 0;
+}
+
+.product-info__top {
+  display: flex;
+}
+
+.product-info__top-id {
+  margin-right: 12px;
+  max-width: 90px;
+  font-family: "SFT", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: rgb(69, 79, 91);
+}
+
+.product-info__title {
+  letter-spacing: -0.7px;
+  max-width: 549px;
+  font-family: "SFT-bold", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: rgb(22, 28, 36);
+  margin-bottom: 17px;
+}
+
+.checkbox-actions__text {
+  font-family: "SFT-bold", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgb(22, 28, 36);
+  max-width: 220px;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+
+.checkbox-actions__list {
+  display: flex;
+}
+
+.checkbox-actions__list-item {
+  display: flex;
+  margin-right: 19px;
+}
+
+.checkbox-actions__list-item-label {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-actions__list-item-label-custom {
+  margin-right: 20px;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.checkbox-actions__list-item-label-custom::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: 0px;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgb(196, 205, 213);
+  background: white;
+  border-radius: 2px;
+  transition: background-color 0.2s;
+}
+
+input[type=checkbox]:checked+.checkbox-actions__list-item-label-custom::before {
+  background: rgb(66, 149, 228);
+  border: none;
+}
+
+input[type=checkbox]:checked+.checkbox-actions__list-item-label-custom::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: -1px;
+  transform: translateY(-50%) rotate(45deg);
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+}
+
+.checkbox-actions__list-item-descr {
+  font-size: 14px;
+  font-family: "SFT", sans-serif;
+  font-weight: 400;
+  color: rgb(69, 79, 91);
+  line-height: 24px;
+  max-width: 160px;
 }
 
 /*# sourceMappingURL=style.css.map */

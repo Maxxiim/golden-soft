@@ -16,7 +16,7 @@ const paginate = (products) => {
       const li = document.createElement('li');
       li.classList.add('.catalog-carousel__list-item');
       li.innerHTML = `
-      <a href="#">
+      <a href="./product.html">
                   <div class="catalog-carousel__item-header">
                     <img class="catalog-carousel__item-header-img" src="${product.image}" alt="${product.name}">
                     <div class="catalog-carousel__item-header-block">
