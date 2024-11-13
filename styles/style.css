@@ -1915,7 +1915,7 @@ input[type=checkbox]:checked + .sidebar__checkbox-list-item-label-custom::after 
 
 .product__wrapper {
   display: flex;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 }
 
 .product-slider {
@@ -2345,7 +2345,7 @@ input[type=checkbox]:checked + .sidebar__checkbox-list-item-label-custom::after 
 
 .product-details__list {
   display: flex;
-  margin-bottom: 36px;
+  margin-bottom: 33px;
 }
 
 .product-details__list-item {
@@ -2426,7 +2426,11 @@ input[type=checkbox]:checked + .sidebar__checkbox-list-item-label-custom::after 
 }
 
 .product-details__content-descr {
-  margin-bottom: 116px;
+  position: relative;
+}
+
+.product-details__content-descr-content {
+  display: none;
 }
 
 .product-details__content-descr-content-info {
@@ -2443,11 +2447,12 @@ input[type=checkbox]:checked + .sidebar__checkbox-list-item-label-custom::after 
 }
 
 .checkbox-product {
-  margin-top: 24px;
+  margin-top: 31px;
   margin-bottom: 24px;
 }
 
 .checkbox-product__text {
+  letter-spacing: -0.1px;
   max-width: 633px;
   font-family: "SFT-bold", sans-serif;
   font-weight: 600;
@@ -2507,6 +2512,138 @@ input[type=checkbox]:checked + .sidebar__checkbox-list-item-label-custom::after 
   line-height: 26px;
   color: rgb(69, 79, 91);
   max-width: 583px;
+}
+
+.product-details__content-descr-content-img {
+  position: absolute;
+  right: 7px;
+  top: -17px;
+}
+
+.product-details__content-descr-content-img-advantage {
+  width: 500px;
+  height: auto;
+}
+
+.product-details__content-reviews-comments {
+  width: 817px;
+}
+
+.product-details__content-reviews-comment {
+  width: 817px;
+  border: 1px solid rgb(234, 234, 234);
+  padding: 16px 24px 24px 25px;
+  margin-bottom: 16px;
+}
+
+.product-details__content-reviews-comment-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 11px;
+  margin-left: -25px;
+  margin-right: -24px;
+  border-bottom: 1px solid rgb(234, 234, 234);
+  margin-bottom: 16px;
+}
+
+.product-details__content-reviews-comment-top-name {
+  font-family: "SFT-medium", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: #161C24;
+  padding-left: 23px;
+}
+
+.product-details__content-reviews-comment-top-date {
+  font-family: "SFT-light", sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  color: #454F5B;
+}
+
+.product-details__content-reviews-comment-text {
+  font-family: "SFT", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  max-width: 769px;
+  color: rgb(22, 28, 36);
+  margin-bottom: 24px;
+}
+
+.product-details__content-reviews-comment-action {
+  display: flex;
+  align-items: center;
+}
+
+.product-details__content-reviews-comment-action-reply {
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.product-details__content-reviews-comment-action-reply-text {
+  font-family: "SFT", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  color: rgb(69, 79, 91);
+  transition: all 0.15s ease-in;
+}
+.product-details__content-reviews-comment-action-reply-text:hover {
+  color: rgb(66, 149, 228);
+}
+
+.product-details__content-reviews-comment-action-comment {
+  cursor: pointer;
+}
+
+.product-details__content-reviews-comment-action-comment-text {
+  font-family: "SFT", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  color: rgb(69, 79, 91);
+  transition: all 0.15s ease-in;
+}
+.product-details__content-reviews-comment-action-comment-text:hover {
+  color: rgb(66, 149, 228);
+}
+
+.product-details__reviews-stars {
+  margin-right: 26px;
+}
+
+.product-details__reviews-star {
+  width: 20px;
+  height: 20px;
+}
+
+.product-details__content-reviews-comments-load {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.product-details__content-reviews-comments-load:hover .product-details__content-reviews-comments-load-text {
+  color: #4295E4;
+}
+
+.product-details__content-reviews-comments-load-img {
+  stroke: #4295E4;
+  fill: none;
+  margin-right: 10px;
+}
+
+.product-details__content-reviews-comments-load-text {
+  font-family: "SFT", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgb(69, 79, 91);
 }
 
 /*# sourceMappingURL=style.css.map */
