@@ -674,10 +674,13 @@
     height: auto;
 }
 
-.product-details__content-reviews {}
+.product-details__content-reviews {
+    display: flex;
+}
 
 .product-details__content-reviews-comments {
     width: 817px;
+    margin-right: 33px;
 }
 
 .product-details__content-reviews-comment {
@@ -802,4 +805,105 @@
     font-size: 14px;
     line-height: 24px;
     color: rgb(69, 79, 91);
+}
+
+
+// form reviews
+.product-details__content-reviews-leave {
+    width: 393px;
+}
+
+.product-details__content-reviews-leave-content {
+    border: 1px solid rgb(234, 234, 234);
+    padding: 24px 27px 24px 21px;
+}
+
+.reviews-leave__form {}
+
+.reviews-leave__form-stars {
+    margin-bottom: 20px;
+}
+
+.reviews-leave__form-stars-text {
+    margin-bottom: 6px;
+    display: block;
+    font-family: "SFT-medium", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgb(22, 28, 36);
+}
+
+.reviews-leave__form-stars-star {}
+
+.reviews-leave__form-field {
+    margin-bottom: 20px;
+}
+
+.reviews-leave__form-field-label {
+    margin-bottom: 6px;
+    display: block;
+    font-family: "SFT-medium", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgb(22, 28, 36);
+}
+
+.reviews-leave__form-field-input {
+    font-family: "SFT", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 12px 16px;
+    width: 100%;
+    border: 1px solid rgb(228, 231, 233);
+    outline: 1px solid rgb(228, 231, 233);
+    max-width: 345px;
+    color: rgb(22, 28, 36);
+
+    &::placeholder {
+        color: rgb(173, 173, 173);
+    }
+}
+
+.reviews-leave__form-field-textarea {
+    padding: 12px 16px;
+    width: 100%;
+    font-family: "SFT", sans-serif;
+    resize: vertical;
+    min-height: 140px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    border: 1px solid rgb(228, 231, 233);
+    outline: 1px solid rgb(228, 231, 233);
+    max-width: 345px;
+    color: rgb(22, 28, 36);
+}
+
+.feedback__submit-btn {
+    font-family: "SFT-medium", sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    line-height: 19px;
+    width: 345px;
+    text-align: center;
+    border: none;
+    padding: 10px;
+    padding: 15px 0;
+    background: rgb(66, 149, 228);
+    transition: all .17s ease-in-out;
+
+    &:hover {
+        color: rgb(255, 255, 255);
+        background: rgb(86, 169, 248);
+    }
+
+    &:active {
+        color: rgb(255, 255, 255);
+        background: rgb(46, 129, 208);
+    }
 }
