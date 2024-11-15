@@ -2176,8 +2176,8 @@ input[type=checkbox]:checked + .sidebar__checkbox-list-item-label-custom::after 
   top: 15px;
   left: 15px;
   transform: translateY(-50%) rotate(45deg);
-  width: 10px;
-  height: 14px;
+  width: 9px;
+  height: 15px;
   border: solid rgb(89, 100, 105);
   border-width: 0 2px 2px 0;
 }
@@ -2385,6 +2385,11 @@ input[type=checkbox]:checked + .sidebar__checkbox-list-item-label-custom::after 
   display: none;
 }
 
+.product-details__content-characteristics__active {
+  display: flex;
+  margin-bottom: 100px;
+}
+
 .product-details__content-characteristics-left {
   width: 605px;
   margin-right: 30px;
@@ -2426,14 +2431,17 @@ input[type=checkbox]:checked + .sidebar__checkbox-list-item-label-custom::after 
 }
 
 .product-details__content-descr {
+  display: none;
   position: relative;
+  margin-bottom: 116px;
 }
 
-.product-details__content-descr-content {
-  display: none;
+.product-details__content-descr__active {
+  display: flex;
 }
 
 .product-details__content-descr-content-info {
+  margin-top: 17px;
   width: 711px;
 }
 
@@ -2526,6 +2534,11 @@ input[type=checkbox]:checked + .sidebar__checkbox-list-item-label-custom::after 
 }
 
 .product-details__content-reviews {
+  display: none;
+  margin-bottom: 100px;
+}
+
+.product-details__content-reviews__active {
   display: flex;
 }
 
@@ -2586,7 +2599,7 @@ input[type=checkbox]:checked + .sidebar__checkbox-list-item-label-custom::after 
 
 .product-details__content-reviews-comment-action-reply {
   cursor: pointer;
-  margin-right: 20px;
+  margin-right: 36px;
 }
 
 .product-details__content-reviews-comment-action-reply-text {
@@ -2664,8 +2677,38 @@ input[type=checkbox]:checked + .sidebar__checkbox-list-item-label-custom::after 
   margin-bottom: 20px;
 }
 
+.reviews-leave__form-stars-star {
+  cursor: pointer;
+  display: inline-flex;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  background-color: black;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  z-index: 1;
+  border: 11px solid white;
+  transition: all 0.15s ease-in;
+}
+.reviews-leave__form-stars-star::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 18px;
+  height: 18px;
+  clip-path: inherit;
+  background-color: transparent;
+  border: 1px solid rgb(196, 205, 213);
+  z-index: 0;
+}
+.reviews-leave__form-stars-star:hover {
+  background-color: white;
+  border: 11px solid rgb(247, 171, 58);
+}
+
 .reviews-leave__form-stars-text {
-  margin-bottom: 6px;
+  letter-spacing: -1px;
+  margin-bottom: 8px;
   display: block;
   font-family: "SFT-medium", sans-serif;
   font-weight: 500;
@@ -2679,6 +2722,7 @@ input[type=checkbox]:checked + .sidebar__checkbox-list-item-label-custom::after 
 }
 
 .reviews-leave__form-field-label {
+  letter-spacing: -1px;
   margin-bottom: 6px;
   display: block;
   font-family: "SFT-medium", sans-serif;
