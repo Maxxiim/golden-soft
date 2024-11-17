@@ -187,6 +187,7 @@
 }
 
 .product-info__options-package-content-text {
+    user-select: none;
     width: 100%;
     max-width: 260px;
     font-family: "SFT", sans-serif;
@@ -198,7 +199,7 @@
 
 .product-info__options-package-content-unfold {
     cursor: pointer;
-    transition: all .1s ease-in;
+    transition: all .18s ease-in;
     stroke: rgb(22, 28, 36);
 
     &:hover {
@@ -220,6 +221,7 @@
     left: 0;
     width: 100%;
     max-width: 288px;
+    background: rgb(255, 255, 255);
     box-shadow: 0px 4px 15px -2px #0000001A;
 
 }
@@ -290,18 +292,36 @@
     &::after {
         content: "";
         position: absolute;
-        top: 15px;
-        left: 15px;
+        top: 18px;
+        left: 16px;
         transform: translateY(-50%) rotate(45deg);
-        width: 9px;
+        width: 8px;
         height: 15px;
         border: solid rgb(89, 100, 105);
         border-width: 0 2px 2px 0;
     }
 }
 
+.product-info__colors-list-box-black__active,
+.product-info__colors-list-box-yellow__active {
+    border: 1px solid rgb(66, 149, 228);
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 18px;
+        left: 16px;
+        transform: translateY(-50%) rotate(45deg);
+        width: 8px;
+        height: 15px;
+        border: solid rgb(255, 255, 255);
+        border-width: 0 2px 2px 0;
+    }
+}
+
 .product-info__colors-list-box__white {
     position: relative;
+    border: 1px solid rgb(66, 149, 228);
     background: rgb(255, 255, 255);
 }
 
@@ -331,6 +351,7 @@
 }
 
 .product-info__price-old {
+    position: relative;
     width: 100%;
     max-width: 110px;
     font-family: "SFT-light", sans-serif;
@@ -338,6 +359,17 @@
     font-size: 20px;
     line-height: 24px;
     color: rgb(164, 164, 164);
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 12px;
+        left: 0;
+        width: 100%;
+        max-width: 84px;
+        height: 1px;
+        background: rgb(164, 164, 164);
+    }
 }
 
 .product-info__buying {
@@ -445,6 +477,7 @@
     cursor: pointer;
     stroke: rgb(69, 79, 91);
     fill: none;
+    transition: all .2s ease-in-out;
 
     &:hover {
         stroke: rgb(66, 149, 228);
