@@ -99,6 +99,10 @@ body {
         border: 1px solid rgb(196, 205, 213);
         z-index: 0;
     }
+
+    &:hover {
+        border: 8px solid rgb(247, 171, 58);
+    }
 }
 
 .reviews__stars-star:last-child {

@@ -181,6 +181,9 @@ body {
   border: 1px solid rgb(196, 205, 213);
   z-index: 0;
 }
+.reviews__stars-star:hover {
+  border: 8px solid rgb(247, 171, 58);
+}
 
 .reviews__stars-star:last-child {
   margin-right: 0;
@@ -1950,8 +1953,15 @@ input[type=checkbox]:checked + .sidebar__checkbox-list-item-label-custom::after 
 }
 
 .product-slider__main-img {
+  display: none;
   width: 100%;
   height: auto;
+}
+
+.product-slider__main-img__active {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .product-slider__thumbnails-list {
@@ -2134,6 +2144,7 @@ input[type=checkbox]:checked + .sidebar__checkbox-list-item-label-custom::after 
   max-width: 288px;
   background: rgb(255, 255, 255);
   box-shadow: 0px 4px 15px -2px rgba(0, 0, 0, 0.1019607843);
+  z-index: 800;
 }
 
 .package-modal__active {
@@ -2267,6 +2278,7 @@ input[type=checkbox]:checked + .sidebar__checkbox-list-item-label-custom::after 
   max-width: 84px;
   height: 1px;
   background: rgb(164, 164, 164);
+  z-index: 0;
 }
 
 .product-info__buying {
@@ -2630,6 +2642,27 @@ input[type=checkbox]:checked + .sidebar__checkbox-list-item-label-custom::after 
   font-size: 12px;
   line-height: 14px;
   color: #454F5B;
+}
+
+.product-details__reviews-star {
+  margin-right: 7px;
+  cursor: pointer;
+  display: inline-flex;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  background-color: black;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  z-index: 1;
+  border: 11px solid white;
+  transition: all 0.15s ease-in;
+}
+.product-details__reviews-star:hover {
+  border: 11px solid rgb(247, 171, 58);
+}
+
+.product-details__reviews-star__active {
+  border: 11px solid rgb(247, 171, 58);
 }
 
 .product-details__content-reviews-comment-text {
