@@ -1,19 +1,54 @@
-const productMainImage = document.querySelector('.product-slider__main');
-const productThumbnailsImages = document.querySelectorAll('.product-slider__thumbnails-list-item img');
-productThumbnailsImages.forEach((thumbnail) => {
-    thumbnail.addEventListener('click', () => {
-        const newSrc = thumbnail.src.replace('thumbnails', 'main');
-        console.log(newSrc)
+// ================================================================
+// header-modal index.html
+const headerModal = document.querySelector('.header-modal');
+const btnCatalog = document.querySelector('.header-nav__list-item-catalog');
+const btnCatalogUnfold = document.querySelector(".header-nav__list-item-unfold")
+const listItems = document.querySelectorAll('.header-modal__list-item');
 
-        productMainImage.src = newSrc;
+btnCatalog.addEventListener('mouseenter', () => {
+    headerModal.style.display = 'block';
+    btnCatalogUnfold.classList.add('header-nav__list-item-unfold__active');
+});
 
-        productThumbnailsImages.forEach((item) => item.parent.classList.remove('product-slider__main-img__active'));
+btnCatalog.addEventListener('mouseenter', () => {
+    listItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            listItems.forEach(innerItem => {
+                innerItem.querySelector('p').classList.remove('header-modal__list-item-name__active');
+                innerItem.querySelector('img').style.display = 'none'; // Скрываем изображение
+            });
 
-        thumbnail.parentNode.classList.add('product-slider__main-img__active')
+            const nameElement = item.querySelector('p');
+            nameElement.classList.add('header-modal__list-item-name__active');
+
+            const imageElement = item.querySelector('img');
+            imageElement.style.display = 'block';
+        });
+
     });
 });
-// ================================================================
 
+headerModal.addEventListener('mouseleave', () => {
+    headerModal.style.display = 'none';
+    btnCatalogUnfold.classList.remove('header-nav__list-item-unfold__active');
+});
+
+// ================================================================
+// product slider section
+const mainImage = document.querySelector('.product-slider__main-img');
+const thumbnails = document.querySelectorAll('.product-slider__thumbnails-list-item');
+thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener('click', function () {
+        thumbnails.forEach(t => t.classList.remove('product-slider__main-img__active'));
+
+        this.classList.add('product-slider__main-img__active');
+
+        const thumbnailImage = this.querySelector('img');
+        mainImage.src = thumbnailImage.src;
+    });
+});
+
+// ================================================================
 const fieldPackageModal = document.querySelector('.product-info__options-package-content');
 const packageModalUnfoldIcon = document.querySelector('.product-info__options-package-content-unfold');
 const packageModal = document.querySelector('.package-modal');
@@ -75,7 +110,7 @@ colorSelection.forEach((color) => {
             });
             color.classList.add('product-info__colors-list-box-yellow__active');
             color.classList.add('product-info__colors-list-box__active');
-        }
+        };
     });
 });
 
@@ -112,19 +147,80 @@ detailsItem.forEach((item) => {
             blockCharacteristic.classList.add('product-details__content-characteristics__active');
             blockDescr.classList.remove('product-details__content-descr__active');
             blockReviews.classList.remove('product-details__content-reviews__active');
-        }
+        };
 
         if (e.target.innerText === 'Описание') {
             blockDescr.classList.add('product-details__content-descr__active');
             blockCharacteristic.classList.remove('product-details__content-characteristics__active');
             blockReviews.classList.remove('product-details__content-reviews__active');
-        }
+        };
 
         if (e.target.innerText === 'Отзывы') {
             blockReviews.classList.add('product-details__content-reviews__active');
             blockDescr.classList.remove('product-details__content-descr__active');
             blockCharacteristic.classList.remove('product-details__content-characteristics__active');
-        }
+        };
 
-    })
-})
+    });
+});
+
+// ====================================================================================
+// product slider index.html
+let position = 0;
+let slidesToShow = 4;
+let slidesToScroll = 4;
+
+const productContainer = document.querySelector('.product-carousel');
+const productList = document.querySelector('.product-carousel__list');
+const productItem = document.querySelectorAll('.product-carousel__list-item');
+const itemCount = productItem.length;
+const itemWidth = productContainer.clientWidth / slidesToShow;
+let movePosition = slidesToScroll * itemWidth;
+
+const prevBtn = document.querySelector(".popular__arrow-left");
+const nextBtn = document.querySelector(".popular__arrow-right");
+
+productItem.forEach((el) => {
+    el.style.minWindth = `${itemWidth}px`;
+});
+
+nextBtn.addEventListener('click', () => {
+    const itemsLeft = itemCount - (Math.abs(position) + slidesToShow + itemWidth) / itemWidth;
+
+    position -= itemsLeft >= slidesToScroll ? movePosition : itemsLeft = itemWidth;
+    setPosition();
+    checkBtns();
+});
+
+prevBtn.addEventListener('click', () => {
+    const itemsLeft = Math.abs(position) / itemWidth;
+
+    position += itemsLeft >= slidesToScroll ? movePosition : itemsLeft = itemWidth;
+    setPosition();
+    checkBtns();
+});
+
+const setPosition = () => {
+    productList.style.transform = `translateX(${position}px)`;
+};
+
+const checkBtns = () => {
+    prevBtn.disabled = position === 0;
+    nextBtn.disabled = position <= (itemCount - slidesToShow) * itemWidth;
+
+    if (position === 0) {
+        prevBtn.classList.add("popular__arrow__grey");
+        prevBtn.classList.remove("popular__arrow-left");
+    } else {
+        prevBtn.classList.remove("popular__arrow__grey");
+        prevBtn.classList.add("popular__arrow-left");
+    }
+
+    if (position <= -((itemCount - slidesToShow) * itemWidth)) {
+        nextBtn.classList.remove("popular__arrow-right");
+        nextBtn.classList.add("popular__arrow__grey");
+    } else {
+        nextBtn.classList.remove("popular__arrow__grey");
+        nextBtn.classList.add("popular__arrow-right");
+    }
+};

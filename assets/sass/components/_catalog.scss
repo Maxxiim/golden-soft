@@ -303,7 +303,7 @@ input[type="checkbox"]:checked+.sidebar__checkbox-list-item-label-custom::after 
     top: -3px;
     transform: translateY(-50%) rotate(45deg);
     width: 5px;
-    height: 10px;
+    height: 9px;
     border: solid white;
     border-width: 0 2px 2px 0;
 }
@@ -627,7 +627,7 @@ input[type="checkbox"]:checked+.sidebar__checkbox-list-item-label-custom::after 
     justify-content: flex-start;
 }
 
-.catalog-product__list-item {
+.catalog-carousel__list-item {
     width: 288px;
     max-width: 290px;
     position: relative;

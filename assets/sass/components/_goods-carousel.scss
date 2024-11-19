@@ -160,8 +160,8 @@
 .controls__dots-item {
     position: relative;
     cursor: pointer;
-    width: 6px;
-    height: 6px;
+    width: 8px;
+    height: 8px;
     background: rgb(173, 215, 255);
     border-radius: 50%;
     transition: all .2s ease;
@@ -174,20 +174,17 @@
 .controls__dots-item-active {
     position: relative;
     cursor: pointer;
-    width: 6px;
-    height: 6px;
     background: rgb(66, 149, 228);
     border-radius: 50%;
-    transition: all .2s ease;
 
     &:after {
         content: "";
         position: absolute;
-        top: -59%;
+        top: -50%;
         left: -50%;
         border: 1px solid rgb(173, 215, 255);
-        width: 12px;
-        height: 12px;
+        width: 16px;
+        height: 16px;
         border-radius: 50%;
     }
 

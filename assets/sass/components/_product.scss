@@ -25,15 +25,20 @@
     display: none;
     width: 100%;
     height: auto;
+    cursor: pointer;
 }
 
 .product-slider__main-img__active {
+    cursor: pointer;
     width: 100%;
-    height: auto;
+    max-width: 615px;
+    max-height: 513px;
+    height: 100%;
     display: block;
 }
 
 .product-slider__thumbnails {}
+
 
 .product-slider__thumbnails-list {
     display: flex;
@@ -55,6 +60,14 @@
     &:last-child {
         margin-right: 0;
     }
+}
+
+.product-slider__thumbnails-list-item-img {
+    width: 100%;
+    max-width: 142px;
+    height: 133px;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
@@ -113,7 +126,6 @@
 .checkbox-actions__list-item-label-custom {
     margin-right: 20px;
     position: relative;
-    cursor: pointer;
     user-select: none;
     display: inline-flex;
     align-items: center;
@@ -139,7 +151,7 @@
         top: -1px;
         transform: translateY(-50%) rotate(45deg);
         width: 5px;
-        height: 10px;
+        height: 9px;
         border: solid white;
         border-width: 0 2px 2px 0;
     }
